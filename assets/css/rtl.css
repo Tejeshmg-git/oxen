@@ -1,0 +1,17 @@
+/* 
+    Oxen - RTL Layout Logic 
+    Moved from main style.css for technical structure compliance.
+*/
+
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .nav-links {
+    flex-direction: row-reverse;
+}
+
+/* Ensure icons and other directional elements flip correctly if needed */
+[dir="rtl"] .nav-controls {
+    flex-direction: row-reverse;
+}

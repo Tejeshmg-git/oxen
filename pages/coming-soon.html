@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Reveal | Oxen Leather Anticipation</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <script src="https://unpkg.com/lucide@0.344.0"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-y: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: var(--bg-light); /* Uses design system background */
+            padding: var(--space-80) 0;
+            transition: var(--transition-smooth);
+        }
+        .reveal-content {
+            position: relative;
+            z-index: 3;
+            color: var(--primary-color);
+            text-align: center;
+            width: 100%;
+            max-width: 900px;
+            padding: 0 var(--space-24);
+        }
+
+        /* Variable Overrides for Light/Dark Context */
+        body.dark-mode {
+            background: var(--primary-color);
+        }
+        body.dark-mode .reveal-content {
+            color: white;
+        }
+        body.dark-mode .reveal-content h1,
+        body.dark-mode .reveal-content h4 {
+            color: white;
+        }
+        body.dark-mode .countdown-val {
+            color: white;
+        }
+        body.dark-mode .countdown-label {
+            color: rgba(255,255,255,0.6);
+        }
+         body.dark-mode .progress-bar {
+            background: rgba(255, 255, 255, 0.1);
+        }
+         body.dark-mode .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-color: rgba(255, 255, 255, 0.05);
+        }
+         body.dark-mode .nav-link {
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Light Theme Manual Adjustments */
+        body:not(.dark-mode) .reveal-content h1,
+        body:not(.dark-mode) .reveal-content h4 {
+            color: var(--primary-color);
+        }
+        body:not(.dark-mode) .countdown-val {
+            color: var(--primary-color);
+        }
+        body:not(.dark-mode) .countdown-label {
+            color: rgba(61, 43, 31, 0.5);
+        }
+        body:not(.dark-mode) .progress-bar {
+            background: rgba(61, 43, 31, 0.1);
+        }
+        body:not(.dark-mode) .glass-card {
+            background: white;
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        body:not(.dark-mode) .nav-link {
+            color: var(--primary-color);
+        }
+        body:not(.dark-mode) .logo {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <a href="../index.html" class="nav-link" style="position: absolute; top: var(--space-48); left: var(--space-48); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; z-index: 10; display: flex; align-items: center; gap: 8px; text-decoration: none;">
+        <i data-lucide="arrow-left" style="width: 20px; height: 20px;"></i>
+        Return to the Studio
+    </a>
+
+    <button class="control-btn theme-toggle" aria-label="Toggle Theme" style="position: absolute; top: var(--space-48); right: var(--space-48); z-index: 11; background: transparent; border: none; cursor: pointer; color: inherit;">
+        <i data-lucide="moon" style="width: 24px; height: 24px;"></i>
+    </button>
+
+    <div class="reveal-content">
+        <a href="../index.html" class="logo" style="margin-bottom: var(--space-48); display: inline-flex; align-items: center; gap: 8px;">
+            <img src="../assets/img/logo.png" alt="Oxen Logo" class="logo-icon">
+            Oxen
+        </a>
+        
+        <span class="journal-tag" style="color: var(--secondary-color); margin-bottom: var(--space-24);">Architectural Teaser</span>
+        <h1 style="margin-bottom: var(--space-24);">Something Fine is Being Crafted</h1>
+        <p style="opacity: 0.8; max-width: 600px; margin: 0 auto;">We are currently at the workbench finalizing the *Horizon Autumn* collection. Every stitch is manual, every edge is friction-polished. The wait is nearly over.</p>
+
+        <!-- Countdown -->
+        <div class="countdown-container">
+            <div class="countdown-unit">
+                <span class="countdown-val">12</span>
+                <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-unit">
+                <span class="countdown-val">08</span>
+                <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-unit">
+                <span class="countdown-val">42</span>
+                <span class="countdown-label">Min</span>
+            </div>
+            <div class="countdown-unit">
+                <span class="countdown-val" id="secs">00</span>
+                <span class="countdown-label">Secs</span>
+            </div>
+        </div>
+
+        <!-- Crafting Progress -->
+        <div class="progress-container">
+            <div class="progress-header">
+                 <span>Studio Workflow</span>
+                 <span>88% Hand-Stitched</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- Notification Card -->
+        <div class="glass-card" style="max-width: 500px; margin: 0 auto; padding: var(--space-48);">
+            <h4>Gain First-Tier Access</h4>
+            <form class="newsletter-input-group">
+                <input type="email" placeholder="Private email address" class="newsletter-input" required>
+                <button type="submit" class="newsletter-btn">
+                     <span>Invite Me</span>
+                     <i data-lucide="arrow-right"></i>
+                </button>
+            </form>
+            <p style="font-size: 0.7rem; opacity: 0.6; margin-top: var(--space-24);">✦ Collectors on the waitlist receive a 4-hour window before public release.</p>
+        </div>
+
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        lucide.createIcons();
+
+        // Simple seconds tick for effect
+        let s = 59;
+        setInterval(() => {
+            s--;
+            if (s < 0) s = 59;
+            const secsEl = document.getElementById('secs');
+            if (secsEl) secsEl.innerText = s.toString().padStart(2, '0');
+        }, 1000);
+    </script>
+</body>
+</html>

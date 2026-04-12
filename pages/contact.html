@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Oxen Global Studios</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/lucide@0.344.0"></script>
+    <style>
+        /* Custom Map Marker Adjustments */
+        .leaflet-container { font-family: var(--font-primary) !important; }
+        .leaflet-popup-content-wrapper { border-radius: 4px; border: 1px solid var(--secondary-color); }
+    </style>
+</head>
+<body>
+
+    <header id="main-header" class="scrolled">
+        <div class="container nav-container">
+            <div class="logo-wrapper">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/img/logo.png" alt="Oxen Logo" class="logo-icon">
+                    Oxen
+                </a>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="../index.html" class="nav-link">Home 1</a>
+                <a href="../index-premium.html" class="nav-link">Home 2</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="products.html" class="nav-link">Collections</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </nav>
+
+            <div class="nav-controls">
+                <div class="utility-icons">
+                    <button class="control-btn theme-toggle" aria-label="Toggle Theme">
+                        <i data-lucide="moon"></i>
+                    </button>
+                    <button class="control-btn rtl-toggle" aria-label="Toggle RTL">
+                        <i data-lucide="languages"></i>
+                    </button>
+                </div>
+                <a href="products.html" class="btn btn-primary btn-sm">Shop Now</a>
+            </div>
+
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Side-Nav Drawer -->
+    <div class="overlay" id="overlay"></div>
+    <div class="sidenav" id="sidenav">
+        <div class="sidenav-header">
+            <a href="../index.html" class="logo">
+                <i data-lucide="shield" style="width: 20px; height: 20px; color: var(--secondary-color);"></i>
+                Oxen
+            </a>
+            <button class="control-btn" id="sidenav-close" aria-label="Close Menu">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        
+        <nav class="sidenav-links">
+            <a href="../index.html" class="sidenav-link">Home 1</a>
+            <a href="../index-premium.html" class="sidenav-link">Home 2</a>
+            <a href="about.html" class="sidenav-link">About</a>
+            <a href="products.html" class="sidenav-link">Collections</a>
+            <a href="services.html" class="sidenav-link">Services</a>
+            <a href="contact.html" class="sidenav-link active">Contact</a>
+        </nav>
+
+        <div class="sidenav-footer">
+            <div class="sidenav-controls">
+                <button class="control-btn theme-toggle" aria-label="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button class="control-btn rtl-toggle" aria-label="Toggle RTL">
+                    <i data-lucide="languages"></i>
+                </button>
+            </div>
+            <a href="products.html" class="btn btn-primary">Shop Now</a>
+            <a href="contact.html" class="btn btn-secondary">Enquire</a>
+        </div>
+    </div>
+
+    <main style="padding-top: 100px;">
+        <!-- Section 1: The Inquiry Suite (Form) -->
+        <section class="section-padding">
+            <div class="container contact-grid">
+                <div>
+                    <span class="journal-tag">Connect</span>
+                    <h1 style="margin-bottom: var(--space-48);">Open an Inquiry</h1>
+                    <form class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-input" placeholder="Thomas Van Oxen" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-input" placeholder="thomas@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Project Type</label>
+                            <select class="form-select">
+                                <option>Private Bespoke Commission</option>
+                                <option>Professional Restoration</option>
+                                <option>Corporate Portfolio Inquiry</option>
+                                <option>Architectural Collaboration</option>
+                                <option>General Information</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">The Concept</label>
+                            <textarea class="form-textarea" placeholder="Describe the heritage item or project vision you wish to discuss..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Submit Inquiry</button>
+                    </form>
+                </div>
+                <div style="padding-top: var(--space-80);">
+                    <div class="pledge-box" style="text-align: left; padding: var(--space-48);">
+                        <span class="journal-tag">Direct Line</span>
+                        <h4 style="margin: var(--space-24) 0;">Studio Concierge</h4>
+                        <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: var(--space-32);">For time-sensitive architectural projects or press verification, please contact our London lead directly.</p>
+                        <div style="display: flex; flex-direction: column; gap: var(--space-16);">
+                            <a href="mailto:studio@oxenleather.com" style="text-decoration: none; color: var(--primary-color); font-weight: 600;">studio@oxenleather.com</a>
+                            <a href="tel:+442071234567" style="text-decoration: none; color: var(--primary-color); font-weight: 600;">+44 207 123 4567</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: The Studio Network (Interactive Map) -->
+        <section style="margin-bottom: var(--space-120);">
+            <div class="container">
+                <div class="flex-center" style="flex-direction: column; margin-bottom: var(--space-48);">
+                    <span class="journal-tag">Global Studio Network</span>
+                    <h2>The Forged Presence</h2>
+                </div>
+            </div>
+            <div id="contact-map" class="map-container"></div>
+        </section>
+
+        <!-- Section 3: The Regional Forged (Addresses) -->
+        <section class="section-padding" style="background: var(--bg-light);">
+            <div class="container">
+                <div class="location-grid">
+                    <div class="location-item">
+                        <span class="journal-tag">Flagship</span>
+                        <h4>London Studio</h4>
+                        <p>12 Artisan Walk, London<br>United Kingdom, SE1 9XN</p>
+                        <p style="margin-top: var(--space-16);"><em>Appointment Only</em></p>
+                    </div>
+                    <div class="location-item">
+                        <span class="journal-tag">The Hub</span>
+                        <h4>Tuscany Forge</h4>
+                        <p>Via dei Cuoiai, 45, Florence<br>Italy, 50123</p>
+                        <p style="margin-top: var(--space-16);"><em>Tannery & Production</em></p>
+                    </div>
+                    <div class="location-item">
+                        <span class="journal-tag">Exhibition</span>
+                        <h4>New York Showroom</h4>
+                        <p>250 Mercer St, SoHo, NY<br>United States, 10012</p>
+                        <p style="margin-top: var(--space-16);"><em>Archive Exhibitions</em></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: The Communication Ritual -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="flex-center" style="flex-direction: column; margin-bottom: var(--space-80);">
+                    <span class="journal-tag">Expectations</span>
+                    <h2>A Paced Response</h2>
+                </div>
+                <div class="grid grid-3">
+                    <div class="text-center">
+                        <span class="step-num">01</span>
+                        <h4>Studio Review</h4>
+                        <p style="font-size: 0.9rem; opacity: 0.7;">Every inquiry is reviewed by our lead artisan within 24 hours of receipt.</p>
+                    </div>
+                    <div class="text-center">
+                        <span class="step-num">02</span>
+                        <h4>Technical Brief</h4>
+                        <p style="font-size: 0.9rem; opacity: 0.7;">Accepted commissions enter a brief phase where materials and hardware are selected.</p>
+                    </div>
+                    <div class="text-center">
+                        <span class="step-num">03</span>
+                        <h4>Digital Draft</h4>
+                        <p style="font-size: 0.9rem; opacity: 0.7;">Initial silhouettes are drafted digitally before the first cut is made in the study studio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Media & Licensing -->
+        <section class="section-padding" style="background: var(--accent-cream);">
+            <div class="container grid grid-2" style="align-items: center; gap: var(--space-80);">
+                <div class="img-placeholder" data-label="Press Kit & Editorial Shots" style="height: 400px; border-radius: 4px;"></div>
+                <div>
+                    <span class="journal-tag">Partnerships</span>
+                    <h2>Media & Architectural</h2>
+                    <p>We welcome collaborations with gallery curators, architectural firms, and high-end editorial teams. For professional press kit access or project licensing, please use our dedicated partner line.</p>
+                    <a href="mailto:press@oxenleather.com" class="btn btn-secondary" style="margin-top: var(--space-32);">Access Press Vault</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Artisanal Dialogue (Social Architecture) -->
+        <section class="section-padding" style="background: var(--bg-light); border-top: 1px solid rgba(0,0,0,0.05);">
+            <div class="container">
+                <div class="flex-center" style="flex-direction: column; margin-bottom: var(--space-80);">
+                    <span class="journal-tag">Rapid Connect</span>
+                    <h2 class="text-center">Artisanal Dialogue</h2>
+                    <p style="text-align: center; max-width: 600px; opacity: 0.7;">For immediate technical advice or visual confirmations, select the channel that fits your inquiry.</p>
+                </div>
+                
+                <div class="grid grid-3">
+                    <!-- Instagram -->
+                    <div class="pledge-box" style="padding: var(--space-48); text-align: left;">
+                        <h4>Visual Dialogue</h4>
+                        <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: var(--space-24);">Share photos of your space or patina progress for rapid design advice.</p>
+                        <a href="#" class="btn btn-secondary btn-sm" style="border-color: var(--secondary-color); color: var(--secondary-color);">@oxenstudio</a>
+                    </div>
+
+                    <!-- WhatsApp -->
+                    <div class="pledge-box" style="padding: var(--space-48); text-align: left;">
+                        <h4>Rapid Technical</h4>
+                        <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: var(--space-24);">Direct line for dimensions, material availability, and hardware queries.</p>
+                        <a href="#" class="btn btn-secondary btn-sm" style="border-color: var(--secondary-color); color: var(--secondary-color);">WhatsApp Concierge</a>
+                    </div>
+
+                    <!-- LinkedIn -->
+                    <div class="pledge-box" style="padding: var(--space-48); text-align: left;">
+                        <h4>Professional</h4>
+                        <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: var(--space-24);">For architectural licensing, hotel commissions, and firm partnerships.</p>
+                        <a href="#" class="btn btn-secondary btn-sm" style="border-color: var(--secondary-color); color: var(--secondary-color);">Partner Network</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-top">
+            <div class="footer-column">
+                <a href="../index.html" class="logo" style="margin-bottom: var(--space-24);">
+                    <img src="../assets/img/logo.png" alt="Oxen Logo" class="logo-icon">
+                    Oxen
+                </a>
+                <p class="footer-description">
+                    Artisanal leathercraft built for modern excellence. Every piece is hand-stitched, full-grain heritage.
+                </p>
+                <div class="footer-socials">
+                    <a href="#" class="footer-social-link"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="footer-social-link"><i data-lucide="facebook"></i></a>
+                    <a href="#" class="footer-social-link"><i data-lucide="linkedin"></i></a>
+                    <a href="#" class="footer-social-link"><i data-lucide="youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <nav class="footer-links">
+                    <a href="../index.html" class="footer-link">Home V1</a>
+                    <a href="../index-premium.html" class="footer-link">Home V2</a>
+                    <a href="products.html" class="footer-link">Collections</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                </nav>
+            </div>
+
+            <div class="footer-column">
+                <h3>The Studio</h3>
+                <nav class="footer-links">
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                    <a href="404.html" class="footer-link">404 Error</a>
+                    <a href="coming-soon.html" class="footer-link">Coming Soon</a>
+                </nav>
+            </div>
+
+            <div class="footer-column">
+                <h3>Stay Updated</h3>
+                <div class="newsletter-form">
+                    <p class="newsletter-title">Join our private studio journal.</p>
+                    <form class="newsletter-input-group">
+                        <input type="email" placeholder="Email address" class="newsletter-input" required>
+                        <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+                            <span>Join</span>
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </form>
+                    <p class="newsletter-disclaimer">
+                        ✦ No spam. Strictly artisanal inspiration.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Oxen Leather Artisans. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#" class="footer-legal-link">Privacy</a>
+                <a href="#" class="footer-legal-link">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Initialize Lucide
+        lucide.createIcons();
+
+        // Initialize Map
+        const map = L.map('contact-map').setView([40, -10], 2);
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+        }).addTo(map);
+
+        const markers = [
+            { pos: [51.505, -0.09], title: "London Flagship", desc: "The heart of our heritage production." },
+            { pos: [43.769, 11.255], title: "Tuscany Forge", desc: "Our ethical tannery and sourcing hub." },
+            { pos: [40.712, -74.006], title: "SoHo Showroom", desc: "Exhibition space and digital bridge." }
+        ];
+
+        markers.forEach(m => {
+            L.marker(m.pos).addTo(map)
+                .bindPopup(`<strong>${m.title}</strong><br>${m.desc}`);
+        });
+    </script>
+</body>
+</html>

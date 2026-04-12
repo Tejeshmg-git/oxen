@@ -1,0 +1,145 @@
+/* 
+    Oxen - Dark Mode Logic 
+    Moved from main style.css for technical structure compliance.
+*/
+
+body.dark-mode {
+    --bg-light: #121212;
+    --accent-cream: #1A1A1A;
+    --border-color: rgba(255, 255, 255, 0.1);
+    
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode .editorial-content h2,
+body.dark-mode .journal-content h3 {
+    color: var(--text-dark);
+}
+
+body.dark-mode .feature-card {
+    background: var(--card-dark);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .value-icon {
+    color: var(--secondary-color);
+}
+
+body.dark-mode header {
+    background: #121212;
+    border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode header.scrolled {
+    background: rgba(18, 18, 18, 0.95);
+    backdrop-filter: blur(15px);
+}
+
+body.dark-mode .logo {
+    color: var(--secondary-color);
+}
+
+body.dark-mode .btn-secondary {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+body.dark-mode .img-placeholder {
+    background: #2A2A2A;
+    color: rgba(255,255,255,0.2);
+}
+
+/* Footer Dark Mode Support */
+body.dark-mode .main-footer {
+    background-color: #0A0A0A; /* Deeper than bg-dark for contrast */
+    color: var(--text-dark);
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+body.dark-mode .footer-column h3 {
+    color: var(--secondary-color);
+    opacity: 1;
+}
+
+body.dark-mode .footer-description,
+body.dark-mode .footer-link,
+body.dark-mode .footer-social-link,
+body.dark-mode .newsletter-title,
+body.dark-mode .newsletter-input,
+body.dark-mode .newsletter-btn,
+body.dark-mode .newsletter-disclaimer {
+    color: var(--text-dark);
+}
+
+body.dark-mode .newsletter-input::placeholder {
+    color: var(--text-dark);
+    opacity: 0.3;
+}
+
+body.dark-mode .newsletter-input-group {
+    border-bottom-color: rgba(255,255,255,0.2);
+}
+
+body.dark-mode .newsletter-input-group:focus-within {
+    border-bottom-color: var(--secondary-color);
+}
+
+body.dark-mode .newsletter-btn:hover {
+    color: var(--secondary-color);
+}
+
+body.dark-mode .filter-bar {
+    background: rgba(18, 18, 18, 0.9);
+    border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .filter-link {
+    color: var(--text-dark);
+}
+
+body.dark-mode .swatch-circle {
+    border-color: #333;
+}
+
+body.dark-mode .concierge-info {
+    background: #1A1A1A;
+}
+
+body.dark-mode .concierge-card {
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .form-label {
+    color: var(--secondary-color);
+}
+
+body.dark-mode .form-input, 
+body.dark-mode .form-textarea, 
+body.dark-mode .form-select {
+    color: var(--text-dark);
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .form-input:focus, 
+body.dark-mode .form-textarea:focus, 
+body.dark-mode .form-select:focus {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--secondary-color);
+}
+
+body.dark-mode .map-container {
+    background: #1A1A1A;
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .footer-bottom {
+    border-top-color: rgba(255,255,255,0.05);
+}

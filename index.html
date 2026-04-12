@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxen | Handmade Leather Artisans</title>
+    <meta name="description" content="Experience the timeless art of handmade leather. Craftsmanship, durability, and a heritage of excellence.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@0.344.0"></script>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container nav-container">
+            <div class="logo-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logo.png" alt="Oxen Logo" class="logo-icon">
+                    Oxen
+                </a>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link active">Home 1</a>
+                <a href="index-premium.html" class="nav-link">Home 2</a>
+                <a href="pages/about.html" class="nav-link">About</a>
+                <a href="pages/products.html" class="nav-link">Collections</a>
+                <a href="pages/services.html" class="nav-link">Services</a>
+                <a href="pages/contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-controls">
+                <div class="utility-icons">
+                    <button class="control-btn theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                        <i data-lucide="moon"></i>
+                    </button>
+                    <button class="control-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL">
+                        <i data-lucide="languages"></i>
+                    </button>
+                </div>
+                <a href="pages/products.html" class="btn btn-primary btn-sm">Shop Now</a>
+            </div>
+
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Side-Nav Drawer -->
+    <div class="overlay" id="overlay"></div>
+    <div class="sidenav" id="sidenav">
+        <div class="sidenav-header">
+            <a href="index.html" class="logo">
+                <i data-lucide="shield" style="width: 20px; height: 20px; color: var(--secondary-color);"></i>
+                Oxen
+            </a>
+            <button class="control-btn" id="sidenav-close" aria-label="Close Menu">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        
+        <nav class="sidenav-links">
+            <a href="index.html" class="sidenav-link">Home 1</a>
+            <a href="index-premium.html" class="sidenav-link">Home 2</a>
+            <a href="pages/about.html" class="sidenav-link">About</a>
+            <a href="pages/products.html" class="sidenav-link">Collections</a>
+            <a href="pages/services.html" class="sidenav-link">Services</a>
+            <a href="pages/contact.html" class="sidenav-link">Contact</a>
+        </nav>
+
+        <div class="sidenav-footer">
+            <div class="sidenav-controls">
+                <!-- Duplicate toggles for mobile accessibility -->
+                <button class="control-btn theme-toggle" aria-label="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button class="control-btn rtl-toggle" aria-label="Toggle RTL">
+                    <i data-lucide="languages"></i>
+                </button>
+            </div>
+            <a href="pages/products.html" class="btn btn-primary">Shop Now</a>
+            <a href="pages/contact.html" class="btn btn-secondary">Enquire</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Section 0: Hero Classic -->
+        <section class="hero img-placeholder" data-label="Hero Classic Image" style="height: 100vh;">
+            <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.4);"></div>
+            <div class="container" style="position: relative; color: white;">
+                <h1>Hand-Crafted Excellence</h1>
+                <p style="max-width: 600px; margin: 0 auto var(--space-32);">Discover the rich heritage of artisan leatherwork. Every piece tells a story of durability, elegance, and timeless style.</p>
+                <div class="flex-center" style="gap: var(--space-16); width: 100%;">
+                    <a href="pages/products.html" class="btn btn-primary">View Collection</a>
+                    <a href="pages/about.html" class="btn btn-secondary" style="border-color: white; color: white;">Our Story</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: The Heritage Narrative -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="editorial-grid">
+                    <div class="editorial-image-wrapper">
+                        <div class="img-placeholder" data-label="Artisan at Work"></div>
+                        <div class="editorial-badge">Est. 2012</div>
+                    </div>
+                    <div class="editorial-content">
+                        <span class="journal-tag">Our Philosophy</span>
+                        <h2>Patience is our Primary Tool</h2>
+                        <p>At Oxen, we believe that true quality cannot be rushed. Every piece of leather is hand-selected from the finest tanneries in Tuscany, then brought to life in our small-batch studio.</p>
+                        <p style="margin-bottom: var(--space-32);">We don't just make bags and wallets; we forge heirlooms that are designed to age with you, gaining character with every journey and every year.</p>
+                        <a href="pages/about.html" class="btn btn-secondary">Learn Our Process</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: The Signature Series -->
+        <section class="section-padding" style="background-color: var(--accent-cream);">
+            <div class="container">
+                <div class="flex-center" style="flex-direction: column; margin-bottom: var(--space-64);">
+                    <span class="journal-tag">Curated Pieces</span>
+                    <h2 class="text-center">The Signature Series</h2>
+                </div>
+                
+                <div class="grid grid-3">
+                    <!-- Product 1 -->
+                    <a href="pages/product-detail.html" class="feature-card">
+                        <div class="img-placeholder feature-image" data-label="Heritage Satchel"></div>
+                        <div class="feature-info">
+                            <h4>Heritage Satchel</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.7;">Full-grain Vachetta leather with solid brass hardware.</p>
+                            <span class="feature-price">$380.00</span>
+                        </div>
+                    </a>
+
+                    <!-- Product 2 -->
+                    <a href="pages/product-detail.html" class="feature-card">
+                        <div class="img-placeholder feature-image" data-label="Artisan Bifold"></div>
+                        <div class="feature-info">
+                            <h4>Artisan Bifold</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.7;">Hand-stitched with waxed linen thread for a lifetime of use.</p>
+                            <span class="feature-price">$120.00</span>
+                        </div>
+                    </a>
+
+                    <!-- Product 3 -->
+                    <a href="pages/product-detail.html" class="feature-card">
+                        <div class="img-placeholder feature-image" data-label="Field Journal Cover"></div>
+                        <div class="feature-info">
+                            <h4>Field Journal Cover</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.7;">Protective heritage leather for your most important ideas.</p>
+                            <span class="feature-price">$145.00</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="flex-center" style="margin-top: var(--space-64);">
+                    <a href="pages/products.html" class="btn btn-primary">Explore All Collections</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: The Anatomy of Quality -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="grid grid-4" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="value-item">
+                        <div class="value-icon"><i data-lucide="award"></i></div>
+                        <h4>Full-Grain Gold</h4>
+                        <p>We only use the top-most layer of the hide—the strongest and most durable part.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon"><i data-lucide="scissors"></i></div>
+                        <h4>Hand-Cut Mastery</h4>
+                        <p>No laser cutters. Every curve is carved by hand for ultimate precision and respect for the hide.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon"><i data-lucide="layers"></i></div>
+                        <h4>Saddle Stitched</h4>
+                        <p>A traditional technique that won't unravel even if a single stitch is broken.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon"><i data-lucide="refresh-ccw"></i></div>
+                        <h4>Lifetime Repair</h4>
+                        <p>We stand by our work forever. If it breaks, we fix it. No questions asked.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Cinematic Breakout -->
+        <section class="breakout-section img-placeholder" data-label="Workshop Background">
+            <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.5);"></div>
+            <div class="glass-card" style="position: relative; z-index: 2;">
+                <h2 style="color: var(--secondary-color);">Forged in the Studio</h2>
+                <p style="font-size: 1.25rem;">Watch how we transform raw hides into timeless companions. A tradition kept alive by modern hands.</p>
+                <a href="#" class="btn btn-primary" style="margin-top: var(--space-24);">View Studio Film</a>
+            </div>
+        </section>
+
+        <!-- Section 5: Testimonials -->
+        <section class="section-padding" style="background: var(--accent-cream);">
+            <div class="container">
+                <div class="testimonial-box">
+                    <p class="testimonial-quote">"In a world of fast fashion and planned obsolescence, Oxen is a breath of fresh air. My satchel has been through three continents and it only looks better with age."</p>
+                    <div class="testimonial-author">— James Arrington, Architect & Collector</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Studio Journal -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="flex-center" style="flex-direction: column; margin-bottom: var(--space-64);">
+                    <span class="journal-tag">Latest from the Studio</span>
+                    <h2 class="text-center">The Studio Journal</h2>
+                </div>
+
+                <div class="journal-list">
+                    <!-- Post 1 -->
+                    <article class="journal-card">
+                        <div class="img-placeholder" data-label="Leather Patina Guide" style="height: 400px; border-radius: var(--border-radius);"></div>
+                        <div class="journal-content">
+                            <span class="journal-tag">Education</span>
+                            <h3>The Art of the Patina: How Your Leather Tells Your Story</h3>
+                            <p>Discover why full-grain leather changes color over time and how to cultivate the perfect finish on your heritage gear.</p>
+                            <a href="#" class="btn btn-secondary btn-sm" style="margin-top: var(--space-16);">Read Article</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 2 -->
+                    <article class="journal-card">
+                        <div class="img-placeholder" data-label="Stitching Techniques" style="height: 400px; border-radius: var(--border-radius);"></div>
+                        <div class="journal-content">
+                            <span class="journal-tag">Craft</span>
+                            <h3>The Saddle Stitch: Why Hand-Stitched Beats Machine-Made</h3>
+                            <p>An in-depth look at the traditional technique that makes our goods virtually indestructible.</p>
+                            <a href="#" class="btn btn-secondary btn-sm" style="margin-top: var(--space-16);">Read Article</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-top">
+            <div class="footer-column">
+                <a href="index.html" class="logo" style="margin-bottom: var(--space-24);">
+                    <img src="assets/img/logo.png" alt="Oxen Logo" class="logo-icon">
+                    Oxen
+                </a>
+                <p class="footer-description">
+                    Artisanal leathercraft built for modern excellence. Every piece is hand-stitched, full-grain heritage.
+                </p>
+                <div class="footer-socials">
+                    <a href="#" class="footer-social-link"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="footer-social-link"><i data-lucide="facebook"></i></a>
+                    <a href="#" class="footer-social-link"><i data-lucide="linkedin"></i></a>
+                    <a href="#" class="footer-social-link"><i data-lucide="youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <nav class="footer-links">
+                    <a href="index.html" class="footer-link">Home V1</a>
+                    <a href="index-premium.html" class="footer-link">Home V2</a>
+                    <a href="pages/products.html" class="footer-link">Collections</a>
+                    <a href="pages/services.html" class="footer-link">Services</a>
+                </nav>
+            </div>
+
+            <div class="footer-column">
+                <h3>The Studio</h3>
+                <nav class="footer-links">
+                    <a href="pages/about.html" class="footer-link">About</a>
+                    <a href="pages/contact.html" class="footer-link">Contact</a>
+                    <a href="pages/404.html" class="footer-link">404 Error</a>
+                    <a href="pages/coming-soon.html" class="footer-link">Coming Soon</a>
+                </nav>
+            </div>
+
+            <div class="footer-column">
+                <h3>Stay Updated</h3>
+                <div class="newsletter-form">
+                    <p class="newsletter-title">Join our private studio journal.</p>
+                    <form class="newsletter-input-group">
+                        <input type="email" placeholder="Email address" class="newsletter-input" required>
+                        <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+                            <span>Join</span>
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </form>
+                    <p class="newsletter-disclaimer">
+                        ✦ No spam. Strictly artisanal inspiration.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Oxen Leather Artisans. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#" class="footer-legal-link">Privacy</a>
+                <a href="#" class="footer-legal-link">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Initialize Lucide
+        lucide.createIcons();
+    </script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Oxen Leather Collections</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <script src="https://unpkg.com/lucide@0.344.0"></script>
+</head>
+<body>
+
+    <header id="main-header" class="scrolled">
+        <div class="container nav-container">
+            <div class="logo-wrapper">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/img/logo.png" alt="Oxen Logo" class="logo-icon">
+                    Oxen
+                </a>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="../index.html" class="nav-link">Home 1</a>
+                <a href="../index-premium.html" class="nav-link">Home 2</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="products.html" class="nav-link active">Collections</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-controls">
+                <div class="utility-icons">
+                    <button class="control-btn theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                        <i data-lucide="moon"></i>
+                    </button>
+                    <button class="control-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL">
+                        <i data-lucide="languages"></i>
+                    </button>
+                </div>
+                <a href="products.html" class="btn btn-primary btn-sm">Shop Now</a>
+            </div>
+
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Side-Nav Drawer -->
+    <div class="overlay" id="overlay"></div>
+    <div class="sidenav" id="sidenav">
+        <div class="sidenav-header">
+            <a href="../index.html" class="logo">
+                <i data-lucide="shield" style="width: 20px; height: 20px; color: var(--secondary-color);"></i>
+                Oxen
+            </a>
+            <button class="control-btn" id="sidenav-close" aria-label="Close Menu">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        
+        <nav class="sidenav-links">
+            <a href="../index.html" class="sidenav-link">Home 1</a>
+            <a href="../index-premium.html" class="sidenav-link">Home 2</a>
+            <a href="about.html" class="sidenav-link">About</a>
+            <a href="products.html" class="sidenav-link">Collections</a>
+            <a href="services.html" class="sidenav-link">Services</a>
+            <a href="contact.html" class="sidenav-link">Contact</a>
+        </nav>
+
+        <div class="sidenav-footer">
+            <div class="sidenav-controls">
+                <!-- Duplicate toggles for mobile accessibility -->
+                <button class="control-btn theme-toggle" aria-label="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button class="control-btn rtl-toggle" aria-label="Toggle RTL">
+                    <i data-lucide="languages"></i>
+                </button>
+            </div>
+            <a href="products.html" class="btn btn-primary">Shop Now</a>
+            <a href="contact.html" class="btn btn-secondary">Enquire</a>
+        </div>
+    </div>
+
+    <main style="padding-top: 100px;">
+        <!-- Section 0: Hero Collections -->
+        <section class="section-padding">
+            <div class="container text-center">
+                <span class="journal-tag">The Portfolio</span>
+                <h1 style="margin-bottom: var(--space-24);">The Curated Vault</h1>
+                <p style="max-width: 700px; margin: 0 auto; opacity: 0.8;">Explore our definitive collection of hand-stitched leather essentials. From core heritage pieces to limited seasonal edits.</p>
+            </div>
+        </section>
+
+        <!-- Section 1: The Core Portfolio (Main Grid + Filter) -->
+        <div class="filter-bar">
+            <div class="container filter-links">
+                <a href="#" class="filter-link active">All Portfolio</a>
+                <a href="#" class="filter-link">Carrier Bags</a>
+                <a href="#" class="filter-link">Small Goods</a>
+                <a href="#" class="filter-link">Accessories</a>
+            </div>
+        </div>
+
+        <section class="section-padding" style="padding-top: 0;">
+            <div class="container">
+                <div class="grid grid-3">
+                    <!-- Product 1 -->
+                    <a href="product-detail.html" class="feature-card" style="position: relative;">
+                        <span class="badge badge-limited">Limited Production</span>
+                        <div class="img-placeholder feature-image" data-label="The Heritage Satchel"></div>
+                        <div class="feature-info">
+                            <h4>The Heritage Satchel</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.7;">Full-grain Vachetta in Tobacco Brown.</p>
+                            <span class="feature-price">$380.00</span>
+                        </div>
+                    </a>
+
+                    <!-- Product 2 -->
+                    <a href="product-detail.html" class="feature-card" style="position: relative;">
+                        <span class="badge badge-core">Core Collection</span>
+                        <div class="img-placeholder feature-image" data-label="The Bifold Wallet"></div>
+                        <div class="feature-info">
+                            <h4>The Bifold Wallet</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.7;">Hand-stitched shell cordovan.</p>
+                            <span class="feature-price">$145.00</span>
+                        </div>
+                    </a>
+
+                    <!-- Product 3 -->
+                    <a href="product-detail.html" class="feature-card" style="position: relative;">
+                        <span class="badge badge-archive">Archive Status</span>
+                        <div class="img-placeholder feature-image" data-label="The Architect Roll"></div>
+                        <div class="feature-info">
+                            <h4>The Architect Roll</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.7;">Tool roll for design professionals.</p>
+                            <span class="feature-price">$210.00</span>
+                        </div>
+                    </a>
+
+                    <!-- Repeat for 3 more to show grid depth -->
+                    <a href="product-detail.html" class="feature-card" style="position: relative;">
+                        <span class="badge badge-core">Core Collection</span>
+                        <div class="img-placeholder feature-image" data-label="Everyday Tote"></div>
+                        <div class="feature-info">
+                            <h4>The Everyday Tote</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.7;">Zero-hardware, single-piece construction.</p>
+                            <span class="feature-price">$290.00</span>
+                        </div>
+                    </a>
+
+                    <a href="product-detail.html" class="feature-card" style="position: relative;">
+                        <span class="badge badge-limited">Limit 1 Per Client</span>
+                        <div class="img-placeholder feature-image" data-label="The Midnight Clutch"></div>
+                        <div class="feature-info">
+                            <h4>The Midnight Clutch</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.7;">Rare slate pigment finish.</p>
+                            <span class="feature-price">$180.00</span>
+                        </div>
+                    </a>
+
+                    <a href="product-detail.html" class="feature-card" style="position: relative;">
+                        <span class="badge badge-core">Core Collection</span>
+                        <div class="img-placeholder feature-image" data-label="Artisan Belt"></div>
+                        <div class="feature-info">
+                            <h4>The Artisan Belt</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.7;">12oz Bridle leather with solid brass buckle.</p>
+                            <span class="feature-price">$95.00</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: The Leather Atlas (Materials) -->
+        <section class="section-padding" style="background: var(--accent-cream); overflow: hidden;">
+            <div class="container">
+                <div class="grid grid-2" style="align-items: center;">
+                    <div class="img-placeholder" data-label="Macro Leather Texture" style="height: 500px; border-radius: 4px;"></div>
+                    <div style="padding-left: var(--space-48);">
+                        <span class="journal-tag">The Material Atlas</span>
+                        <h2>Beyond the Surface</h2>
+                        <p>Our hides aren't just leather; they are stories recorded in fiber. We specialize in three primary grades, each selected for a specific tactile purpose.</p>
+                        <ul style="list-style: none; padding: 0; margin-top: var(--space-32);">
+                            <li style="margin-bottom: var(--space-24);">
+                                <strong style="color: var(--primary-color);">01. Full-Grain Vachetta</strong><br>
+                                <span style="font-size: 0.9rem; opacity: 0.7;">Untreated, open-pore Italian hide that develops the deepest possible patina.</span>
+                            </li>
+                            <li style="margin-bottom: var(--space-24);">
+                                <strong style="color: var(--primary-color);">02. English Bridle</strong><br>
+                                <span style="font-size: 0.9rem; opacity: 0.7;">Stiff, waxy, and virtually indestructible. Perfect for belts and structured bags.</span>
+                            </li>
+                            <li>
+                                <strong style="color: var(--primary-color);">03. Shell Cordovan</strong><br>
+                                <span style="font-size: 0.9rem; opacity: 0.7;">The pinnacle of durability and shine. Only two small ovals per horse hide.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: The Evolution Gallery (Patina Journey) -->
+        <section class="section-padding" style="background: var(--bg-light); border-top: 1px solid rgba(0,0,0,0.05);">
+            <div class="container">
+                <div class="flex-center" style="flex-direction: column; margin-bottom: var(--space-64);">
+                    <span class="journal-tag">The Lifecycle</span>
+                    <h2 class="text-center">Born to Age</h2>
+                    <p style="max-width: 600px; text-align: center; opacity: 0.7;">Unlike mass-produced alternatives, our Vachetta leather is living material. It records your travels, absorbing sunlight and oils to create a unique, liquid-like patina.</p>
+                </div>
+                
+                <div class="grid grid-3">
+                    <div class="text-center">
+                        <div class="img-placeholder" data-label="Raw State (0 Mo)" style="aspect-ratio: 1/1; border-radius: 4px; margin-bottom: var(--space-24);"></div>
+                        <h4>The Raw State</h4>
+                        <p style="font-size: 0.85rem; opacity: 0.7;">Month 0: A pale, matte cream finish. Sensitive and pristine.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="img-placeholder" data-label="Seasoned (12 Mo)" style="aspect-ratio: 1/1; border-radius: 4px; margin-bottom: var(--space-24);"></div>
+                        <h4>The Seasoned</h4>
+                        <p style="font-size: 0.85rem; opacity: 0.7;">Year 1: Transitioning to a honey-gold hue with initial character marks.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="img-placeholder" data-label="Heirloom (5 Yr)" style="aspect-ratio: 1/1; border-radius: 4px; margin-bottom: var(--space-24);"></div>
+                        <h4>The Heirloom</h4>
+                        <p style="font-size: 0.85rem; opacity: 0.7;">Year 5+: A deep, mahogany gloss. Virtually indestructible and entirely unique.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Color Narrative (Palette) -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="flex-center" style="flex-direction: column; margin-bottom: var(--space-80);">
+                    <span class="journal-tag">The Studio Palette</span>
+                    <h2 class="text-center">Tones of the Earth</h2>
+                </div>
+                <div class="palette-grid">
+                    <div class="swatch-item">
+                        <div class="swatch-circle" style="background: #3D2B1F;"></div>
+                        <h4>Tobacco</h4>
+                        <p style="font-size: 0.8rem; opacity: 0.7;">Our heritage brown deepens with every year.</p>
+                    </div>
+                    <div class="swatch-item">
+                        <div class="swatch-circle" style="background: #1A1917;"></div>
+                        <h4>Midnight</h4>
+                        <p style="font-size: 0.8rem; opacity: 0.7;">Our standard black, matte and light-absorbing.</p>
+                    </div>
+                    <div class="swatch-item">
+                        <div class="swatch-circle" style="background: #541E1B;"></div>
+                        <h4>Oxblood</h4>
+                        <p style="font-size: 0.8rem; opacity: 0.7;">Inspired by 18th-century library bindings.</p>
+                    </div>
+                    <div class="swatch-item">
+                        <div class="swatch-circle" style="background: #706F6D;"></div>
+                        <h4>Slate</h4>
+                        <p style="font-size: 0.8rem; opacity: 0.7;">A contemporary architectural gray.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Hardware & Components -->
+        <section class="section-padding" style="background: var(--bg-light); border-top: 1px solid rgba(0,0,0,0.05);">
+            <div class="container grid grid-2" style="align-items: center;">
+                 <div>
+                    <span class="journal-tag">Foundry Work</span>
+                    <h2>Solid Brass Foundations</h2>
+                    <p>We believe a back is only as strong as its buckle. All our hardware is sand-cast solid brass, sourced from a family-owned foundry in West Midlands. No zinc alloys, no brittle plating—just metal that gains character with age.</p>
+                    <div style="margin-top: var(--space-32); display: flex; gap: var(--space-24);">
+                        <div class="flex-center" style="flex-direction: column; gap: 8px;">
+                            <i data-lucide="anchor" style="color: var(--secondary-color);"></i>
+                            <span style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase;">Salt-Proof</span>
+                        </div>
+                        <div class="flex-center" style="flex-direction: column; gap: 8px;">
+                            <i data-lucide="hammer" style="color: var(--secondary-color);"></i>
+                            <span style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase;">Hand-Forged</span>
+                        </div>
+                        <div class="flex-center" style="flex-direction: column; gap: 8px;">
+                            <i data-lucide="shield" style="color: var(--secondary-color);"></i>
+                            <span style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase;">Lifetime Hardware</span>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="img-placeholder" data-label="Foundry Close-up" style="height: 400px; border-radius: 4px;"></div>
+            </div>
+        </section>
+
+        <!-- Section 6: Concierge (Private Inquiries) -->
+        <section class="concierge-section">
+            <div class="concierge-container">
+                <div class="concierge-visual img-placeholder" data-label="Bespoke Artisan Visual">
+                    <!-- The ✦ symbol is handled in CSS -->
+                </div>
+                <div class="concierge-info">
+                    <span class="journal-tag">The Concierge</span>
+                    <h2>Private Acquisition Service</h2>
+                    <p>Looking for a piece from our archive or a specific material combination not shown in the vault? Our concierge serves collectors and architectural professionals directly for rare acquisitions.</p>
+                    <div style="display: flex;">
+                        <a href="contact.html" class="btn btn-primary">Inquire Privately</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-top">
+            <div class="footer-column">
+                <a href="../index.html" class="logo" style="margin-bottom: var(--space-24);">
+                    <img src="../assets/img/logo.png" alt="Oxen Logo" class="logo-icon">
+                    Oxen
+                </a>
+                <p class="footer-description">
+                    Artisanal leathercraft built for modern excellence. Every piece is hand-stitched, full-grain heritage.
+                </p>
+                <div class="footer-socials">
+                    <a href="#" class="footer-social-link"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="footer-social-link"><i data-lucide="facebook"></i></a>
+                    <a href="#" class="footer-social-link"><i data-lucide="linkedin"></i></a>
+                    <a href="#" class="footer-social-link"><i data-lucide="youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <nav class="footer-links">
+                    <a href="../index.html" class="footer-link">Home V1</a>
+                    <a href="../index-premium.html" class="footer-link">Home V2</a>
+                    <a href="products.html" class="footer-link">Collections</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                </nav>
+            </div>
+
+            <div class="footer-column">
+                <h3>The Studio</h3>
+                <nav class="footer-links">
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                    <a href="404.html" class="footer-link">404 Error</a>
+                    <a href="coming-soon.html" class="footer-link">Coming Soon</a>
+                </nav>
+            </div>
+
+            <div class="footer-column">
+                <h3>Stay Updated</h3>
+                <div class="newsletter-form">
+                    <p class="newsletter-title">Join our private studio journal.</p>
+                    <form class="newsletter-input-group">
+                        <input type="email" placeholder="Email address" class="newsletter-input" required>
+                        <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+                            <span>Join</span>
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </form>
+                    <p class="newsletter-disclaimer">
+                        ✦ No spam. Strictly artisanal inspiration.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Oxen Leather Artisans. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#" class="footer-legal-link">Privacy</a>
+                <a href="#" class="footer-legal-link">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

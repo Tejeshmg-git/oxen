@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Oxen Studio Collaborative</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    <link rel="icon" type="image/png" href="../assets/img/logo.png">
+    <script src="https://unpkg.com/lucide@0.344.0"></script>
+</head>
+<body>
+
+    <header id="main-header" class="scrolled">
+        <div class="container nav-container">
+            <div class="logo-wrapper">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/img/logo.png" alt="Oxen Logo" class="logo-icon">
+                    Oxen
+                </a>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="../index.html" class="nav-link">Home 1</a>
+                <a href="../index-premium.html" class="nav-link">Home 2</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="products.html" class="nav-link">Collections</a>
+                <a href="services.html" class="nav-link active">Services</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-controls">
+                <div class="utility-icons">
+                    <button class="control-btn theme-toggle" aria-label="Toggle Theme">
+                        <i data-lucide="moon"></i>
+                    </button>
+                    <button class="control-btn rtl-toggle" aria-label="Toggle RTL">
+                        <i data-lucide="languages"></i>
+                    </button>
+                </div>
+                <a href="products.html" class="btn btn-primary btn-sm">Shop Now</a>
+            </div>
+
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Side-Nav Drawer -->
+    <div class="overlay" id="overlay"></div>
+    <div class="sidenav" id="sidenav">
+        <div class="sidenav-header">
+            <a href="../index.html" class="logo">
+                <i data-lucide="shield" style="width: 20px; height: 20px; color: var(--secondary-color);"></i>
+                Oxen
+            </a>
+            <button class="control-btn" id="sidenav-close" aria-label="Close Menu">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        
+        <nav class="sidenav-links">
+            <a href="../index.html" class="sidenav-link">Home 1</a>
+            <a href="../index-premium.html" class="sidenav-link">Home 2</a>
+            <a href="about.html" class="sidenav-link">About</a>
+            <a href="products.html" class="sidenav-link">Collections</a>
+            <a href="services.html" class="sidenav-link active">Services</a>
+            <a href="contact.html" class="sidenav-link">Contact</a>
+        </nav>
+
+        <div class="sidenav-footer">
+            <div class="sidenav-controls">
+                <button class="control-btn theme-toggle" aria-label="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button class="control-btn rtl-toggle" aria-label="Toggle RTL">
+                    <i data-lucide="languages"></i>
+                </button>
+            </div>
+            <a href="products.html" class="btn btn-primary">Shop Now</a>
+            <a href="contact.html" class="btn btn-secondary">Enquire</a>
+        </div>
+    </div>
+
+    <main style="padding-top: 100px;">
+        <!-- Section 0: Hero Services -->
+        <section class="section-padding">
+            <div class="container text-center">
+                <span class="journal-tag">The Studio Access</span>
+                <h1 style="margin-bottom: var(--space-24);">Beyond the Product</h1>
+                <p style="max-width: 700px; margin: 0 auto; opacity: 0.8;">Specialized artisanal labor for private commissions, professional restorations, and corporate portfolio development.</p>
+            </div>
+        </section>
+
+        <!-- Section 1: Private Commissions (Bespoke) -->
+        <section class="section-padding" style="background: var(--bg-light);">
+            <div class="container">
+                <div class="grid grid-2" style="align-items: center; gap: var(--space-80);">
+                    <div class="img-placeholder" data-label="Bespoke Sketch & Leather" style="height: 500px; border-radius: 4px;"></div>
+                    <div>
+                        <span class="journal-tag">Bespoke Design</span>
+                        <h2>The Commission Journey</h2>
+                        <p>Have a specific vision that isn't in our current vault? We work with individual clients to build heirloom-grade items from scratch. From custom architectural tool rolls to personalized travel trunks.</p>
+                        <ul style="list-style: none; padding: 0; margin-top: var(--space-32);">
+                            <li style="margin-bottom: var(--space-24); display: flex; gap: var(--space-16);">
+                                <i data-lucide="check-circle" style="color: var(--secondary-color); flex-shrink: 0;"></i>
+                                <p style="margin: 0; font-size: 0.95rem;">One-on-one consultation with our lead artisan.</p>
+                            </li>
+                            <li style="margin-bottom: var(--space-24); display: flex; gap: var(--space-16);">
+                                <i data-lucide="check-circle" style="color: var(--secondary-color); flex-shrink: 0;"></i>
+                                <p style="margin: 0; font-size: 0.95rem;">Selection of rare, limited-run hides and hardware.</p>
+                            </li>
+                            <li style="display: flex; gap: var(--space-16);">
+                                <i data-lucide="check-circle" style="color: var(--secondary-color); flex-shrink: 0;"></i>
+                                <p style="margin: 0; font-size: 0.95rem;">Full pattern-making services for unique silhouettes.</p>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary" style="margin-top: var(--space-48);">Inquire Bespoke</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Restoration Lab -->
+        <section class="section-padding" style="background: var(--accent-cream);">
+            <div class="container">
+                <div class="flex-center" style="flex-direction: column; margin-bottom: var(--space-80);">
+                    <span class="journal-tag">The Restoration Lab</span>
+                    <h2>Heirlooms Revived</h2>
+                    <p style="max-width: 600px; text-align: center; opacity: 0.7;">We stand by our products for a lifetime. Our restoration services ensure your Oxen piece survives generations of use.</p>
+                </div>
+                <div class="grid grid-3">
+                    <div class="text-center">
+                        <i data-lucide="wrench" style="width: 32px; height: 32px; color: var(--secondary-color); margin-bottom: var(--space-24);"></i>
+                        <h4>Structural Repair</h4>
+                        <p style="font-size: 0.9rem; opacity: 0.7;">Replacement of broken hardware, re-stitching unravelled seams, and structural reinforcing.</p>
+                    </div>
+                    <div class="text-center">
+                        <i data-lucide="droplet" style="width: 32px; height: 32px; color: var(--secondary-color); margin-bottom: var(--space-24);"></i>
+                        <h4>Deep Hydration</h4>
+                        <p style="font-size: 0.9rem; opacity: 0.7;">Nutrient-rich deep cleaning and conditioning using our proprietary organic waxes.</p>
+                    </div>
+                    <div class="text-center">
+                        <i data-lucide="sparkles" style="width: 32px; height: 32px; color: var(--secondary-color); margin-bottom: var(--space-24);"></i>
+                        <h4>Edge Renewal</h4>
+                        <p style="font-size: 0.9rem; opacity: 0.7;">Full re-burnishing of worn edges to restore the original glass-like protection.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Corporate Portfolio -->
+        <section class="section-padding">
+            <div class="container grid grid-2" style="align-items: center; gap: var(--space-80);">
+                <div style="order: 2;">
+                     <div class="img-placeholder" data-label="Corporate Debossing Example" style="height: 450px; border-radius: 4px;"></div>
+                </div>
+                <div>
+                    <span class="journal-tag">Professional Solutions</span>
+                    <h2>Corporate Gifting</h2>
+                    <p>Subtle, architectural, and unforgettable. We provide professional firms with tailored heritage items for their most valued partners. Every piece carries the weight of true craftsmanship.</p>
+                    <div style="margin-top: var(--space-32);">
+                        <div class="flex-center" style="justify-content: flex-start; gap: var(--space-16); margin-bottom: var(--space-24);">
+                             <i data-lucide="check" style="color: var(--secondary-color);"></i>
+                             <span>Custom debossed firm logos</span>
+                        </div>
+                        <div class="flex-center" style="justify-content: space-between; gap: var(--space-16); margin-bottom: var(--space-24);">
+                            <div class="flex-center" style="gap: var(--space-16);">
+                                <i data-lucide="check" style="color: var(--secondary-color);"></i>
+                                <span>Batch serialized numbering</span>
+                            </div>
+                        </div>
+                        <div class="flex-center" style="justify-content: flex-start; gap: var(--space-16);">
+                            <i data-lucide="check" style="color: var(--secondary-color);"></i>
+                            <span>Premium bespoke packaging</span>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-secondary" style="margin-top: var(--space-48);">Download Portfolio</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Patina Clinic -->
+        <section class="section-padding" style="background: var(--primary-color); color: white;">
+            <div class="container text-center">
+                <span class="journal-tag" style="color: var(--secondary-color);">Professional Care</span>
+                <h2 style="margin: var(--space-24) 0;">The Patina Clinic</h2>
+                <div class="grid grid-4" style="margin-top: var(--space-64);">
+                    <div>
+                        <h4 style="color: var(--secondary-color);">Moisturize</h4>
+                        <p style="font-size: 0.85rem; opacity: 0.8;">Maintaining fiber flexibility to prevent surface cracking over decades of use.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--secondary-color);">Protect</h4>
+                        <p style="font-size: 0.85rem; opacity: 0.8;">Applying hydrophobic organic coatings to resist accidental spillages and rain.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--secondary-color);">Sanitize</h4>
+                        <p style="font-size: 0.85rem; opacity: 0.8;">Expert removal of deep-seated bacteria and oils without damaging the grain.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--secondary-color);">Consult</h4>
+                        <p style="font-size: 0.85rem; opacity: 0.8;">Expert advice on the optimal aging strategy for your specific hide type.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Studio Workshops -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="flex-center" style="flex-direction: column; margin-bottom: var(--space-80);">
+                    <span class="journal-tag">Education</span>
+                    <h2>Masterclass Sessions</h2>
+                    <p style="text-align: center; max-width: 600px; opacity: 0.7;">Experience the Art of the Stitch first-hand. Our seasonal workshops are designed for those with an obsession for detail.</p>
+                </div>
+                <div class="grid grid-2">
+                    <div class="img-placeholder" data-label="Workshop atmosphere" style="height: 400px; border-radius: 4px;"></div>
+                    <div class="pledge-box" style="text-align: left; padding: var(--space-48);">
+                        <h3>Foundation Workshop</h3>
+                        <p style="font-size: 0.9rem;">A one-day immersion into the history of Vachetta, manual pattern-making, and the foundational Saddle Stitch.</p>
+                        <ul style="padding-left: var(--space-16); margin: var(--space-24) 0; font-size: 0.85rem; opacity: 0.8;">
+                             <li>All tools provided by the studio.</li>
+                             <li>Max 4 participants per session.</li>
+                             <li>Lunch and leather care kit included.</li>
+                        </ul>
+                        <span style="font-weight: 700; color: var(--primary-color); display: block; margin-bottom: var(--space-24);">$250.00 / Participant</span>
+                        <a href="contact.html" class="btn btn-primary btn-sm">Join Next Session</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Global White-Glove -->
+        <section class="concierge-section">
+            <div class="concierge-container">
+                <div class="concierge-visual img-placeholder" data-label="Shipping Box & Seal Visual"></div>
+                <div class="concierge-info">
+                   <span class="journal-tag">Logistics</span>
+                   <h2>White-Glove Distribution</h2>
+                   <p>Luxury production requires luxury logistics. We manage the full journey of your heirloom, ensuring it arrives at your door with the same care it received on the workbench.</p>
+                   <div style="display: flex; gap: var(--space-32); margin-top: var(--space-32);">
+                       <div class="flex-center" style="flex-direction: column; gap: 8px;">
+                           <i data-lucide="globe" style="color: var(--secondary-color);"></i>
+                           <span style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase;">Global Tracking</span>
+                       </div>
+                       <div class="flex-center" style="flex-direction: column; gap: 8px;">
+                           <i data-lucide="truck" style="color: var(--secondary-color);"></i>
+                           <span style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase;">Secure Transit</span>
+                       </div>
+                   </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-top">
+            <div class="footer-column">
+                <a href="../index.html" class="logo" style="margin-bottom: var(--space-24);">
+                    <img src="../assets/img/logo.png" alt="Oxen Logo" class="logo-icon">
+                    Oxen
+                </a>
+                <p class="footer-description">
+                    Artisanal leathercraft built for modern excellence. Every piece is hand-stitched, full-grain heritage.
+                </p>
+                <div class="footer-socials">
+                    <a href="#" class="footer-social-link"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="footer-social-link"><i data-lucide="facebook"></i></a>
+                    <a href="#" class="footer-social-link"><i data-lucide="linkedin"></i></a>
+                    <a href="#" class="footer-social-link"><i data-lucide="youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <nav class="footer-links">
+                    <a href="../index.html" class="footer-link">Home V1</a>
+                    <a href="../index-premium.html" class="footer-link">Home V2</a>
+                    <a href="products.html" class="footer-link">Collections</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                </nav>
+            </div>
+
+            <div class="footer-column">
+                <h3>The Studio</h3>
+                <nav class="footer-links">
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                    <a href="404.html" class="footer-link">404 Error</a>
+                    <a href="coming-soon.html" class="footer-link">Coming Soon</a>
+                </nav>
+            </div>
+
+            <div class="footer-column">
+                <h3>Stay Updated</h3>
+                <div class="newsletter-form">
+                    <p class="newsletter-title">Join our private studio journal.</p>
+                    <form class="newsletter-input-group">
+                        <input type="email" placeholder="Email address" class="newsletter-input" required>
+                        <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+                            <span>Join</span>
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </form>
+                    <p class="newsletter-disclaimer">
+                        ✦ No spam. Strictly artisanal inspiration.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Oxen Leather Artisans. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#" class="footer-legal-link">Privacy</a>
+                <a href="#" class="footer-legal-link">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Initialize Lucide
+        lucide.createIcons();
+    </script>
+</body>
+</html>

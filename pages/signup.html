@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Oxen Leather</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://unpkg.com/lucide@0.344.0"></script>
+</head>
+<body class="flex-center" style="min-height: 100vh; background: var(--bg-light);">
+
+    <div style="background: var(--bg-light); border: 1px solid rgba(0,0,0,0.1); padding: var(--space-48); border-radius: var(--border-radius); width: 100%; max-width: 450px; box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
+        <div class="text-center" style="margin-bottom: var(--space-32);">
+            <a href="../index.html" class="logo" style="font-size: 2rem;">Oxen</a>
+            <h1 style="margin-top: var(--space-16);">Create Account</h1>
+            <p>Join the artisan leather community</p>
+        </div>
+
+        <form>
+            <div style="margin-bottom: var(--space-16);">
+                <label style="display: block; margin-bottom: var(--space-8); font-weight: 600;">Full Name</label>
+                <input type="text" placeholder="John Doe" style="width: 100%; padding: 0 var(--space-16); min-height: var(--touch-target); border: 1px solid #ccc; border-radius: var(--border-radius); background: transparent; color: inherit; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: var(--space-16);">
+                <label style="display: block; margin-bottom: var(--space-8); font-weight: 600;">Email Address</label>
+                <input type="email" placeholder="name@email.com" style="width: 100%; padding: 0 var(--space-16); min-height: var(--touch-target); border: 1px solid #ccc; border-radius: var(--border-radius); background: transparent; color: inherit; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: var(--space-16);">
+                <label style="display: block; margin-bottom: var(--space-8); font-weight: 600;">Password</label>
+                <div style="position: relative;">
+                    <input type="password" placeholder="••••••••" style="width: 100%; padding: 0 var(--space-16); min-height: var(--touch-target); border: 1px solid #ccc; border-radius: var(--border-radius); background: transparent; color: inherit; box-sizing: border-box;">
+                    <button type="button" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; color: #888;">
+                        <i data-lucide="eye" style="width: 18px; height: 18px;"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: var(--space-32); font-size: 0.9rem;">
+                <label style="display: flex; align-items: flex-start; gap: var(--space-8); cursor: pointer;">
+                    <input type="checkbox" style="margin-top: 4px;"> 
+                    <span>I agree to the <a href="#" style="color: var(--primary-color); font-weight: 600;">Terms of Service</a> and <a href="#" style="color: var(--primary-color); font-weight: 600;">Privacy Policy</a></span>
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Create Account</button>
+            
+            <div style="margin-top: var(--space-32); text-align: center;">
+                <p>Or sign up with</p>
+                <div class="flex-center" style="gap: var(--space-16); margin-top: var(--space-16);">
+                    <button type="button" class="btn btn-secondary btn-sm" style="flex: 1;"><i data-lucide="google" style="margin-right: 8px;"></i> Google</button>
+                    <button type="button" class="btn btn-secondary btn-sm" style="flex: 1;"><i data-lucide="apple" style="margin-right: 8px;"></i> Apple</button>
+                </div>
+            </div>
+        </form>
+
+        <div style="margin-top: var(--space-48); text-align: center; font-size: 0.9rem;">
+            <p>Already have an account? <a href="login.html" style="color: var(--primary-color); text-decoration: none; font-weight: 700;">Log in</a></p>
+        </div>
+    </div>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

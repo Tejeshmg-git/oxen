@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxen | Premium Leather Collection</title>
+    <meta name="description" content="Exclusive artisan leather goods. Home 2: Premium Version.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <script src="https://unpkg.com/lucide@0.344.0"></script>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container nav-container">
+            <div class="logo-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logo.png" alt="Oxen Logo" class="logo-icon">
+                    Oxen
+                </a>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home 1</a>
+                <a href="index-premium.html" class="nav-link active">Home 2</a>
+                <a href="pages/about.html" class="nav-link">About</a>
+                <a href="pages/products.html" class="nav-link">Collections</a>
+                <a href="pages/services.html" class="nav-link">Services</a>
+                <a href="pages/contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-controls">
+                <div class="utility-icons">
+                    <button class="control-btn theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                        <i data-lucide="moon"></i>
+                    </button>
+                    <button class="control-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL">
+                        <i data-lucide="languages"></i>
+                    </button>
+                </div>
+                <a href="pages/products.html" class="btn btn-primary btn-sm">Shop Now</a>
+            </div>
+
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Side-Nav Drawer -->
+    <div class="overlay" id="overlay"></div>
+    <div class="sidenav" id="sidenav">
+        <div class="sidenav-header">
+            <a href="index.html" class="logo">
+                <i data-lucide="shield" style="width: 20px; height: 20px; color: var(--secondary-color);"></i>
+                Oxen
+            </a>
+            <button class="control-btn" id="sidenav-close" aria-label="Close Menu">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        
+        <nav class="sidenav-links">
+            <a href="index.html" class="sidenav-link">Home 1</a>
+            <a href="index-premium.html" class="sidenav-link">Home 2</a>
+            <a href="pages/about.html" class="sidenav-link">About</a>
+            <a href="pages/products.html" class="sidenav-link">Collections</a>
+            <a href="pages/services.html" class="sidenav-link">Services</a>
+            <a href="pages/contact.html" class="sidenav-link">Contact</a>
+        </nav>
+
+        <div class="sidenav-footer">
+            <div class="sidenav-controls">
+                <!-- Duplicate toggles for mobile accessibility -->
+                <button class="control-btn theme-toggle" aria-label="Toggle Theme">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button class="control-btn rtl-toggle" aria-label="Toggle RTL">
+                    <i data-lucide="languages"></i>
+                </button>
+            </div>
+            <a href="pages/products.html" class="btn btn-primary">Shop Now</a>
+            <a href="pages/contact.html" class="btn btn-secondary">Enquire</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Section 0: Hero Premium (Already exists) -->
+        <section style="height: 100vh; display: grid; grid-template-columns: 1fr 1fr;">
+            <div class="flex-center" style="background: var(--bg-light); padding: var(--space-48);">
+                <div style="max-width: 500px;">
+                    <span style="text-transform: uppercase; letter-spacing: 4px; color: var(--secondary-color); font-weight: 700; font-size: 0.8rem; display: block; margin-bottom: var(--space-16);">Limited Edition</span>
+                    <h1 style="margin-bottom: var(--space-24);">The Masterpiece Series</h1>
+                    <p style="margin-bottom: var(--space-32);">Elegance redefined through obsessive attention to detail. Our premium collection uses only the top 1% of full-grain hides.</p>
+                    <div style="display: flex; gap: var(--space-16);">
+                        <a href="pages/products.html" class="btn btn-primary">Discover More</a>
+                        <a href="pages/contact.html" class="btn btn-secondary">Private Commission</a>
+                    </div>
+                </div>
+            </div>
+            <div class="img-placeholder" data-label="Hero Premium Image" style="background: var(--primary-color);"></div>
+        </section>
+
+        <!-- Section 1: Sensory Materiality -->
+        <section class="sensory-grid">
+            <div class="img-placeholder sensory-image" data-label="Leather Texture Close-up"></div>
+            <div class="sensory-content">
+                <span class="journal-tag">The Sensory Experience</span>
+                <h2>Materiality Beyond Measure</h2>
+                <p>Our hides are sourced exclusively from high-altitude pastures where the climate produces an exceptionally dense grain. The result is a leather that breathes, ages, and develops a deep, liquid-like patina over decades.</p>
+                <div style="margin-top: var(--space-32);">
+                    <div style="display: flex; gap: var(--space-24); align-items: center; margin-bottom: var(--space-16);">
+                        <i data-lucide="wind" style="color: var(--secondary-color);"></i>
+                        <span>Breathable, open-pore structure</span>
+                    </div>
+                    <div style="display: flex; gap: var(--space-24); align-items: center;">
+                        <i data-lucide="shield-check" style="color: var(--secondary-color);"></i>
+                        <span>Self-healing surface properties</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: The Masterpiece Showcase -->
+        <section class="masterpiece-showcase">
+            <div class="container">
+                <div class="showcase-grid">
+                    <div>
+                        <span class="journal-tag" style="color: var(--secondary-color);">Flagship Item</span>
+                        <h2 style="font-size: clamp(2rem, 5vw, 4rem); line-height: 1;">The <br>Weekender</h2>
+                        <p style="margin-top: var(--space-32); opacity: 0.8;">The definitive travel companion. Constructed from a single continuous piece of 4.5oz Vachetta leather with hand-forged solid brass hardware.</p>
+                        
+                        <div class="showcase-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Weight</span>
+                                <span class="spec-value">2.4 kg</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Stitching</span>
+                                <span class="spec-value">2,400 Manual Stitches</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Capacity</span>
+                                <span class="spec-value">45 Liters</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Origin</span>
+                                <span class="spec-value">Tuscany, Italy</span>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn btn-secondary" style="margin-top: var(--space-48); border-color: var(--secondary-color); color: var(--secondary-color);">Acquire Masterpiece</a>
+                    </div>
+                    <div class="img-placeholder" data-label="Weekender Bag Detail" style="height: 600px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.1);"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Museum Gallery -->
+        <section class="museum-gallery">
+            <div class="container">
+                <div class="flex-center" style="margin-bottom: var(--space-80); flex-direction: column;">
+                    <span class="journal-tag">The Architecture</span>
+                    <h2>Gallery of Details</h2>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-card">
+                        <div class="img-placeholder" data-label="The Saddle Stitch"></div>
+                        <span class="gallery-caption">Fig 01. Traditional Saddle Stitch</span>
+                    </div>
+                    <div class="gallery-card">
+                        <div class="img-placeholder" data-label="Burnished Edges"></div>
+                        <span class="gallery-caption">Fig 02. Beeswax Burnished Edge</span>
+                    </div>
+                    <div class="gallery-card">
+                        <div class="img-placeholder" data-label="Solid Brass hardware"></div>
+                        <span class="gallery-caption">Fig 03. Hand-Forged Brass Bolt</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: The Bespoke Journey -->
+        <section class="bespoke-section">
+            <div class="bespoke-dark">
+                <span class="journal-tag">Exclusive Service</span>
+                <h2 style="margin-bottom: var(--space-32);">The Private Commission</h2>
+                <p>For those who seek the truly unique. Collaborate directly with our master artisan to design a piece that is yours and yours alone. From custom dimensions to unique hardware finishes, the journey is curated for you.</p>
+                <div style="margin-top: var(--space-48);">
+                    <a href="pages/contact.html" class="btn btn-primary">Start a Bespoke Project</a>
+                </div>
+            </div>
+            <div class="bespoke-light">
+                <div class="img-placeholder" data-label="Consultation Table" style="width: 100%; height: 100%; border-radius: 4px;"></div>
+            </div>
+        </section>
+
+        <!-- Section 5: Global Studios -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="flex-center" style="margin-bottom: var(--space-64); flex-direction: column;">
+                    <span class="journal-tag">Availability</span>
+                    <h2>Our Global Stockists</h2>
+                </div>
+                <div class="grid grid-4" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <div class="location-item">
+                        <i data-lucide="map-pin"></i>
+                        <h4>London</h4>
+                        <p style="font-size: 0.85rem;">Savile Row Studio</p>
+                    </div>
+                    <div class="location-item">
+                        <i data-lucide="map-pin"></i>
+                        <h4>Paris</h4>
+                        <p style="font-size: 0.85rem;">Le Marais Atelier</p>
+                    </div>
+                    <div class="location-item">
+                        <i data-lucide="map-pin"></i>
+                        <h4>New York</h4>
+                        <p style="font-size: 0.85rem;">SoHo Collection</p>
+                    </div>
+                    <div class="location-item">
+                        <i data-lucide="map-pin"></i>
+                        <h4>Tokyo</h4>
+                        <p style="font-size: 0.85rem;">Ginza Flagship</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Collector Invitation -->
+        <section class="collector-invite">
+            <!-- Decorative Elements -->
+            <div class="collector-circle-bg"></div>
+            
+            <div class="container collector-content">
+                <div class="flex-center" style="flex-direction: column;">
+                    <span class="journal-tag" style="color: var(--secondary-color);">Membership</span>
+                    <h2 style="font-size: clamp(2rem, 4vw, 3rem);">The Collector's Circle</h2>
+                    <p style="max-width: 600px; margin-top: var(--space-24); opacity: 0.8;">Join an exclusive network of artisans and collectors. Receive invitations to private studio reveals and priority access to limited edit collections.</p>
+                    
+                    <div class="collector-form-wrapper">
+                        <form class="newsletter-input-group">
+                            <input type="email" placeholder="Email for private invitation" class="newsletter-input" required>
+                            <button type="submit" class="newsletter-btn">
+                                <span>Invite Me</span>
+                                <i data-lucide="arrow-right"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="collector-perks">
+                        <div class="perk-item">
+                            <i data-lucide="key"></i>
+                            <span>Private Access</span>
+                        </div>
+                        <div class="perk-item">
+                            <i data-lucide="sparkles"></i>
+                            <span>Early Releases</span>
+                        </div>
+                        <div class="perk-item">
+                            <i data-lucide="award"></i>
+                            <span>Bespoke Service</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-top">
+            <div class="footer-column">
+                <a href="index.html" class="logo" style="margin-bottom: var(--space-24);">
+                    <img src="assets/img/logo.png" alt="Oxen Logo" class="logo-icon">
+                    Oxen
+                </a>
+                <p class="footer-description">
+                    Artisanal leathercraft built for modern excellence. Every piece is hand-stitched, full-grain heritage.
+                </p>
+                <div class="footer-socials">
+                    <a href="#" class="footer-social-link"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="footer-social-link"><i data-lucide="facebook"></i></a>
+                    <a href="#" class="footer-social-link"><i data-lucide="linkedin"></i></a>
+                    <a href="#" class="footer-social-link"><i data-lucide="youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <nav class="footer-links">
+                    <a href="index.html" class="footer-link">Home V1</a>
+                    <a href="index-premium.html" class="footer-link">Home V2</a>
+                    <a href="pages/products.html" class="footer-link">Collections</a>
+                    <a href="pages/services.html" class="footer-link">Services</a>
+                </nav>
+            </div>
+
+            <div class="footer-column">
+                <h3>The Studio</h3>
+                <nav class="footer-links">
+                    <a href="pages/about.html" class="footer-link">About</a>
+                    <a href="pages/contact.html" class="footer-link">Contact</a>
+                    <a href="pages/404.html" class="footer-link">404 Error</a>
+                    <a href="pages/coming-soon.html" class="footer-link">Coming Soon</a>
+                </nav>
+            </div>
+
+            <div class="footer-column">
+                <h3>Stay Updated</h3>
+                <div class="newsletter-form">
+                    <p class="newsletter-title">Join our private studio journal.</p>
+                    <form class="newsletter-input-group">
+                        <input type="email" placeholder="Email address" class="newsletter-input" required>
+                        <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+                            <span>Join</span>
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </form>
+                    <p class="newsletter-disclaimer">
+                        ✦ No spam. Strictly artisanal inspiration.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Oxen Leather Artisans. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#" class="footer-legal-link">Privacy</a>
+                <a href="#" class="footer-legal-link">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Initialize Lucide
+        lucide.createIcons();
+    </script>
+</body>
+</html>
