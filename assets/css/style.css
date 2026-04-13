@@ -130,6 +130,72 @@ p {
     color: var(--secondary-color);
 }
 
+/* Header Specific Sign-In Button */
+.btn-signin {
+    border: 1px solid rgba(61,43,31,0.1);
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .btn-signin,
+.hero-luxury .btn-signin {
+    border-color: rgba(255,255,255,0.2);
+    color: white;
+}
+
+.btn-signin:hover {
+    background-color: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+[data-theme="dark"] .btn-signin:hover {
+     background-color: var(--secondary-color) !important;
+     color: var(--primary-color) !important;
+     border-color: var(--secondary-color) !important;
+}
+
+/* Authentication Layouts */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-light);
+    padding: var(--space-24);
+}
+
+.auth-card {
+    background: var(--bg-light);
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: var(--space-48);
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    transition: var(--transition-smooth);
+}
+
+@media (max-width: 640px) {
+    .auth-card {
+        padding: var(--space-32);
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-card {
+        padding: var(--space-24);
+        border: none;
+        box-shadow: none;
+        background: transparent;
+    }
+    .auth-container {
+        padding: 0;
+        align-items: flex-start;
+        padding-top: var(--space-120);
+    }
+}
+
 /* Image Placeholder System */
 .img-placeholder {
     background: #E5E5E5;
@@ -399,6 +465,8 @@ body.dark-mode .logo-icon {
     transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1), 
                 visibility 0.5s cubic-bezier(0.77, 0, 0.175, 1);
     box-shadow: -20px 0 60px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .sidenav.active {
@@ -440,6 +508,11 @@ body.dark-mode .logo-icon {
 .sidenav-controls {
     display: flex;
     gap: var(--space-24);
+}
+
+.login-trigger:hover {
+    color: var(--secondary-color) !important;
+    transform: scale(1.1);
 }
 
 /* Overlay */
@@ -1720,16 +1793,18 @@ body.dark-mode .logo-icon {
 @media (max-width: 768px) {
     .hero-luxury { min-height: 80vh; }
     
-    /* Diamond Layout for 3-item Premium grids */
+    /* Diamond Layout for 3-item Premium grids (2 on top, 1 centered below) */
     .gallery-grid, .collector-perks, .restoration-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--space-32) !important;
     }
     .gallery-grid > *:last-child:nth-child(3),
     .collector-perks > *:last-child:nth-child(3),
     .restoration-grid > *:last-child:nth-child(3) {
-        grid-column: span 2;
-        justify-self: center;
-        width: calc(50% - var(--space-24));
+        grid-column: span 2 !important;
+        justify-self: center !important;
+        width: 100% !important;
+        max-width: 500px !important; /* Premium detail card shouldn't be too wide even if spanning */
     }
 }
 
@@ -1781,8 +1856,18 @@ body.dark-mode .logo-icon {
     }
     .sensory-content { order: 2; }
     
-    .showcase-grid img { order: 2; height: 400px; margin-top: var(--space-48); }
-    .showcase-grid div:first-child { order: 1; }
+    .showcase-grid img { order: 2; height: 400px !important; margin-top: var(--space-48); width: 100%; object-fit: cover; }
+    .showcase-grid div:first-child { 
+        order: 1; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+    }
+    .showcase-specs {
+        justify-content: center;
+        width: 100%;
+    }
     
     .bespoke-light { order: 1; min-height: 350px; padding: 0; }
     .bespoke-dark { order: 2; }
@@ -2180,9 +2265,7 @@ body.dark-mode .logo-icon {
     }
 }
 
-/* Services Page Tablet (768px) */
-/* Restoration grid logic moved to consolidated blocks above */
-
+@media (max-width: 768px) {
     /* Patina Clinic 2x2 */
     .clinic-grid {
         grid-template-columns: repeat(2, 1fr);

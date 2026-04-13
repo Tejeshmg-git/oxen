@@ -39,13 +39,14 @@
 
             <div class="nav-controls">
                 <div class="utility-icons">
-                    <button class="control-btn theme-toggle" aria-label="Toggle Theme">
-                        <i data-lucide="moon"></i>
+                    <button class="control-btn theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                        <i data-lucide="moon" style="width: 20px; height: 20px;"></i>
                     </button>
-                    <button class="control-btn rtl-toggle" aria-label="Toggle RTL">
-                        <i data-lucide="languages"></i>
+                    <button class="control-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle RTL">
+                        <i data-lucide="languages" style="width: 20px; height: 20px;"></i>
                     </button>
                 </div>
+                <a href="login.html" class="btn btn-signin btn-sm">Sign In</a>
                 <a href="products.html" class="btn btn-primary btn-sm">Shop Now</a>
             </div>
 
@@ -60,7 +61,7 @@
     <div class="sidenav" id="sidenav">
         <div class="sidenav-header">
             <a href="../index.html" class="logo">
-                <i data-lucide="shield" style="width: 20px; height: 20px; color: var(--secondary-color);"></i>
+                <img src="../assets/img/logo.png" alt="Oxen Logo" class="logo-icon">
                 Oxen
             </a>
             <button class="control-btn" id="sidenav-close" aria-label="Close Menu">
@@ -86,6 +87,7 @@
                     <i data-lucide="languages"></i>
                 </button>
             </div>
+            <a href="login.html" class="btn btn-secondary" style="margin-bottom: var(--space-12); border-color: rgba(212, 175, 55, 0.3); color: var(--secondary-color);">Sign In</a>
             <a href="products.html" class="btn btn-primary">Shop Now</a>
             <a href="contact.html" class="btn btn-secondary">Enquire</a>
         </div>
