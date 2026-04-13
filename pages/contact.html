@@ -19,7 +19,7 @@
 </head>
 <body>
 
-    <header id="main-header" class="scrolled">
+    <header id="main-header">
         <div class="container nav-container">
             <div class="logo-wrapper">
                 <a href="../index.html" class="logo">
@@ -91,10 +91,35 @@
         </div>
     </div>
 
-    <main style="padding-top: 100px;">
+    <main>
+        <!-- Section 0: Hero Contact -->
+        <section class="hero" style="height: 70vh; background-image: url('../assets/images/contact/herosection-img.jpg'); background-size: cover; background-position: center; border-bottom: 1px solid var(--secondary-color); display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.75);"></div>
+            <div class="container text-center" style="position: relative; color: white;">
+                <span class="journal-tag" style="color: var(--secondary-color); letter-spacing: 5px; margin-bottom: var(--space-24); margin-top: var(--space-64); display: block; font-weight: 700;">Reach the Studio</span>
+                <h1 style="margin-bottom: var(--space-48);">Human Dialogue</h1>
+                <p style="max-width: 650px; margin: 0 auto var(--space-80); font-size: 1.1rem; opacity: 0.8; letter-spacing: 0.5px;">Whether for a private commission, a professional partnership, or curious inquiry, our lead artisans are ready to begin the dialogue.</p>
+                
+                <!-- Contact Micro-Interface -->
+                <div class="flex-center contact-micro" style="gap: clamp(1rem, 5vw, 6rem); transition: var(--transition-smooth);">
+                    <div class="flex-center" style="flex-direction: column; gap: var(--space-16);">
+                        <i data-lucide="mail" style="color: var(--secondary-color); width: 22px; height: 22px;"></i>
+                        <span style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.6);">Inquiries</span>
+                    </div>
+                    <div class="flex-center" style="flex-direction: column; gap: var(--space-16);">
+                        <i data-lucide="phone" style="color: var(--secondary-color); width: 22px; height: 22px;"></i>
+                        <span style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.6);">Direct Line</span>
+                    </div>
+                    <div class="flex-center" style="flex-direction: column; gap: var(--space-16);">
+                        <i data-lucide="map-pin" style="color: var(--secondary-color); width: 22px; height: 22px;"></i>
+                        <span style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.6);">Global Studios</span>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Section 1: The Inquiry Suite (Form) -->
-        <section class="section-padding">
-            <div class="container contact-grid">
+        <section class="section-padding inquiry-section">
+            <div class="container grid grid-2 inquiry-grid">
                 <div>
                     <span class="journal-tag">Connect</span>
                     <h1 style="margin-bottom: var(--space-48);">Open an Inquiry</h1>
@@ -126,7 +151,7 @@
                         <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Submit Inquiry</button>
                     </form>
                 </div>
-                <div style="padding-top: var(--space-80);">
+                <div class="concierge-box-wrapper" style="padding-top: var(--space-80);">
                     <div class="pledge-box" style="text-align: left; padding: var(--space-48);">
                         <span class="journal-tag">Direct Line</span>
                         <h4 style="margin: var(--space-24) 0;">Studio Concierge</h4>
@@ -152,26 +177,37 @@
         </section>
 
         <!-- Section 3: The Regional Forged (Addresses) -->
-        <section class="section-padding" style="background: var(--bg-light);">
+        <section class="section-padding" style="background: var(--accent-cream);">
             <div class="container">
-                <div class="location-grid">
+                <div class="flex-center" style="flex-direction: column; margin-bottom: var(--space-80);">
+                    <span class="journal-tag">Locations</span>
+                    <h2>The Regional Studios</h2>
+                    <p style="text-align: center; max-width: 600px; opacity: 0.7;">Visit our global outposts for private consultations and to experience the tactile nature of our heritage collection in person.</p>
+                </div>
+                <div class="location-grid location-grid-restructured">
                     <div class="location-item">
+                        <i data-lucide="map-pin"></i>
                         <span class="journal-tag">Flagship</span>
                         <h4>London Studio</h4>
                         <p>12 Artisan Walk, London<br>United Kingdom, SE1 9XN</p>
-                        <p style="margin-top: var(--space-16);"><em>Appointment Only</em></p>
+                        <p style="margin-top: var(--space-8); font-size: 0.85rem; opacity: 0.6;"><em>Appointment Only</em></p>
+                        <a href="https://maps.google.com" target="_blank" class="location-link">Get Directions <i data-lucide="arrow-right" style="width: 14px; height: 14px; margin: 0;"></i></a>
                     </div>
                     <div class="location-item">
+                        <i data-lucide="factory"></i>
                         <span class="journal-tag">The Hub</span>
                         <h4>Tuscany Forge</h4>
                         <p>Via dei Cuoiai, 45, Florence<br>Italy, 50123</p>
-                        <p style="margin-top: var(--space-16);"><em>Tannery & Production</em></p>
+                        <p style="margin-top: var(--space-8); font-size: 0.85rem; opacity: 0.6;"><em>Tannery & Production</em></p>
+                        <a href="https://maps.google.com" target="_blank" class="location-link">Get Directions <i data-lucide="arrow-right" style="width: 14px; height: 14px; margin: 0;"></i></a>
                     </div>
                     <div class="location-item">
+                        <i data-lucide="tent"></i>
                         <span class="journal-tag">Exhibition</span>
                         <h4>New York Showroom</h4>
                         <p>250 Mercer St, SoHo, NY<br>United States, 10012</p>
-                        <p style="margin-top: var(--space-16);"><em>Archive Exhibitions</em></p>
+                        <p style="margin-top: var(--space-8); font-size: 0.85rem; opacity: 0.6;"><em>Archive Exhibitions</em></p>
+                        <a href="https://maps.google.com" target="_blank" class="location-link">Get Directions <i data-lucide="arrow-right" style="width: 14px; height: 14px; margin: 0;"></i></a>
                     </div>
                 </div>
             </div>
@@ -184,7 +220,7 @@
                     <span class="journal-tag">Expectations</span>
                     <h2>A Paced Response</h2>
                 </div>
-                <div class="grid grid-3">
+                <div class="grid grid-3 ritual-grid">
                     <div class="text-center">
                         <span class="step-num">01</span>
                         <h4>Studio Review</h4>
@@ -205,14 +241,16 @@
         </section>
 
         <!-- Section 5: Media & Licensing -->
-        <section class="section-padding" style="background: var(--accent-cream);">
-            <div class="container grid grid-2" style="align-items: center; gap: var(--space-80);">
-                <div class="img-placeholder" data-label="Press Kit & Editorial Shots" style="height: 400px; border-radius: 4px;"></div>
+        <section class="section-padding partnership-section" style="background: var(--accent-cream);">
+            <div class="container grid grid-2 partnership-grid" style="align-items: center; gap: var(--space-80);">
+                <img src="../assets/images/contact/Partnerships.jpg" alt="Press Kit & Editorial Shots" class="img-placeholder" style="width: 100%; height: 400px; object-fit: cover; border-radius: 4px;">
                 <div>
                     <span class="journal-tag">Partnerships</span>
                     <h2>Media & Architectural</h2>
                     <p>We welcome collaborations with gallery curators, architectural firms, and high-end editorial teams. For professional press kit access or project licensing, please use our dedicated partner line.</p>
-                    <a href="mailto:press@oxenleather.com" class="btn btn-secondary" style="margin-top: var(--space-32);">Access Press Vault</a>
+                    <div class="partnership-actions">
+                        <a href="mailto:press@oxenleather.com" class="btn btn-secondary" style="margin-top: var(--space-32);">Access Press Vault</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -226,23 +264,23 @@
                     <p style="text-align: center; max-width: 600px; opacity: 0.7;">For immediate technical advice or visual confirmations, select the channel that fits your inquiry.</p>
                 </div>
                 
-                <div class="grid grid-3">
+                <div class="social-grid">
                     <!-- Instagram -->
-                    <div class="pledge-box" style="padding: var(--space-48); text-align: left;">
+                    <div class="pledge-box social-box">
                         <h4>Visual Dialogue</h4>
                         <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: var(--space-24);">Share photos of your space or patina progress for rapid design advice.</p>
                         <a href="#" class="btn btn-secondary btn-sm" style="border-color: var(--secondary-color); color: var(--secondary-color);">@oxenstudio</a>
                     </div>
 
                     <!-- WhatsApp -->
-                    <div class="pledge-box" style="padding: var(--space-48); text-align: left;">
+                    <div class="pledge-box social-box">
                         <h4>Rapid Technical</h4>
                         <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: var(--space-24);">Direct line for dimensions, material availability, and hardware queries.</p>
                         <a href="#" class="btn btn-secondary btn-sm" style="border-color: var(--secondary-color); color: var(--secondary-color);">WhatsApp Concierge</a>
                     </div>
 
                     <!-- LinkedIn -->
-                    <div class="pledge-box" style="padding: var(--space-48); text-align: left;">
+                    <div class="pledge-box social-box">
                         <h4>Professional</h4>
                         <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: var(--space-24);">For architectural licensing, hotel commissions, and firm partnerships.</p>
                         <a href="#" class="btn btn-secondary btn-sm" style="border-color: var(--secondary-color); color: var(--secondary-color);">Partner Network</a>

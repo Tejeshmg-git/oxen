@@ -87,4 +87,38 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileToggle) mobileToggle.addEventListener('click', openMenu);
     if (sidenavClose) sidenavClose.addEventListener('click', closeMenu);
     if (overlay) overlay.addEventListener('click', closeMenu);
+
+    // Product Filter Logic
+    const filterLinks = document.querySelectorAll('.filter-link');
+    const products = document.querySelectorAll('.feature-card');
+
+    if (filterLinks.length > 0 && products.length > 0) {
+        filterLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Toggle active class
+                filterLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                
+                const filterValue = link.getAttribute('data-filter');
+                
+                products.forEach(product => {
+                    const category = product.getAttribute('data-category');
+                    
+                    if (filterValue === 'all' || filterValue === category) {
+                        product.style.display = 'block';
+                        // Add a small fade-in effect
+                        product.style.opacity = '0';
+                        setTimeout(() => {
+                            product.style.transition = 'opacity 0.4s ease';
+                            product.style.opacity = '1';
+                        }, 10);
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
 });

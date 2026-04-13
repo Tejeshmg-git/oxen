@@ -59,24 +59,31 @@
         body.dark-mode .nav-link { color: white; }
         body.dark-mode h1 { color: white; }
         
-        /* Focus Action - Dark Mode Override */
         body.dark-mode .btn-primary {
             background-color: var(--secondary-color);
             color: var(--primary-color);
             border-color: var(--secondary-color);
         }
+
+        @media (max-width: 640px) {
+            .status-link { top: var(--space-24) !important; left: var(--space-24) !important; }
+            .theme-toggle { top: var(--space-24) !important; right: var(--space-24) !important; }
+            .status-back-text { display: none; }
+            .error-num { font-size: 6rem !important; }
+            .error-actions { flex-direction: column; gap: var(--space-16) !important; width: 100%; max-width: 280px; margin: 0 auto; }
+            .error-actions .btn { width: 100%; text-align: center; }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Symmetrical Controls -->
-    <a href="../index.html" class="nav-link" style="position: absolute; top: var(--space-48); left: var(--space-48); z-index: 10; display: flex; align-items: center; gap: 8px; text-decoration: none;">
-        <i data-lucide="arrow-left" style="width: 20px; height: 20px;"></i>
-        Return to the Studio
+    <a href="../index.html" class="status-link" style="position: absolute; top: var(--space-32); left: var(--space-32); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; z-index: 10; display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit;">
+        <i data-lucide="arrow-left" style="width: 18px; height: 18px;"></i>
+        <span class="status-back-text">Back to Home</span>
     </a>
 
-    <button class="control-btn theme-toggle" aria-label="Toggle Theme" style="position: absolute; top: var(--space-48); right: var(--space-48); z-index: 11; background: transparent; border: none; cursor: pointer; color: inherit;">
-        <i data-lucide="moon" style="width: 24px; height: 24px;"></i>
+    <button class="control-btn theme-toggle" aria-label="Toggle Theme" style="position: absolute; top: var(--space-32); right: var(--space-32); z-index: 11; background: transparent; border: none; cursor: pointer; color: inherit;">
+        <i data-lucide="moon" style="width: 20px; height: 20px;"></i>
     </button>
 
     <div class="error-num">404</div>
@@ -89,10 +96,10 @@
             </a>
 
             <span class="journal-tag" style="color: var(--secondary-color); margin-bottom: var(--space-24);">Archival Irregularity</span>
-            <h1>The Untethered Stitch</h1>
-            <p>It seems the digital artifact you are seeking has unraveled from our archive. Either the line has been retired or the path has been misdirected.</p>
+            <h1 style="font-size: clamp(2rem, 8vw, 3rem); line-height: 1.1;">The Untethered <br>Stitch</h1>
+            <p style="margin-bottom: var(--space-48); opacity: 0.7; font-size: 1rem; max-width: 450px; margin-left: auto; margin-right: auto;">It seems the digital artifact you are seeking has unraveled from our archive.</p>
             
-            <div style="display: flex; gap: var(--space-24); justify-content: center;">
+            <div class="error-actions" style="display: flex; gap: var(--space-24); justify-content: center;">
                 <a href="../index.html" class="btn btn-primary">Studio Home</a>
                 <a href="products.html" class="btn btn-secondary">Current Vault</a>
             </div>

@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <header id="main-header" class="scrolled">
+    <header id="main-header">
         <div class="container nav-container">
             <div class="logo-wrapper">
                 <a href="../index.html" class="logo">
@@ -85,13 +85,18 @@
         </div>
     </div>
 
-    <main style="padding-top: 100px;">
+    <main>
         <!-- Section 0: Hero About -->
-        <section class="section-padding">
-            <div class="container text-center">
-                <span class="journal-tag">Since 2012</span>
-                <h1 style="margin-bottom: var(--space-24);">The Soul of the Hide</h1>
-                <p style="max-width: 700px; margin: 0 auto; opacity: 0.8;">A journey through heritage, manual mastery, and the uncompromising pursuit of the perfect stitch.</p>
+        <section class="hero" style="height: 80vh; background-image: url('../assets/images/about/herosection-img.jpg'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center;">
+            <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.6);"></div>
+            <div class="container" style="position: relative; color: white;">
+                <span class="journal-tag" style="color: var(--secondary-color); margin-bottom: var(--space-24); display: block;">Our Origin</span>
+                <h1 style="margin-bottom: var(--space-48);">The Art of the Stitch</h1>
+                <p style="max-width: 700px; margin: 0 auto var(--space-48); font-size: 1.2rem; opacity: 0.8;">Forged in the heart of London, refined in the tanneries of Tuscany. Oxen is a dialogue between traditional saddlery and modern architectural design.</p>
+                <div class="flex-center about-hero-actions" style="gap: var(--space-24);">
+                    <a href="#history" class="btn btn-primary">Our Journey</a>
+                    <a href="products.html" class="btn btn-secondary" style="border-color: white; color: white;">The Collection</a>
+                </div>
             </div>
         </section>
 
@@ -105,7 +110,7 @@
                         <p>Oxen didn't start in a factory. It began on a single oak workbench in a small London garage with a set of inherited saddlery tools and a refusal to accept the "fast-fashion" status quo.</p>
                         <p>Our founder sought to rediscover the tactile satisfaction of an item built by hand—something that wouldn't just last a season, but would survive a lifetime of travel and stories. Today, that same workbench sits at the center of our studio as a reminder of our roots.</p>
                     </div>
-                    <div class="img-placeholder" data-label="Archive Photo 2012" style="height: 450px; border-radius: 4px;"></div>
+                    <img src="../assets/images/about/The Beginning.jpg" alt="Archive Photo 2012" class="img-placeholder" style="width: 100%; height: 450px; object-fit: cover; border-radius: 4px;">
                 </div>
             </div>
         </section>
@@ -138,9 +143,8 @@
         </section>
 
         <!-- Section 3: Words from the Forge (Founder) -->
-        <section class="breakout-section img-placeholder" data-label="Founder Portrait" style="background: var(--primary-color);">
-            <div style="position: absolute; inset: 0; background: rgba(61, 43, 31, 0.7);"></div>
-            <div class="container" style="position: relative; z-index: 2; text-align: center; color: white;">
+        <section class="breakout-section" style="background: var(--primary-color);">
+            <div class="container" style="text-align: center; color: white;">
                 <p style="font-family: var(--font-primary); font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: 500; line-height: 1.4; max-width: 900px; margin: 0 auto var(--space-48);">"Obsessive attention is not a luxury; it is an act of respect for the material and the client."</p>
                 <span class="journal-tag" style="color: var(--secondary-color);">Thomas Van Oxen, Lead Artisan</span>
             </div>
@@ -157,7 +161,7 @@
                 <div class="process-list">
                     <!-- Step 1 -->
                     <div class="process-step">
-                        <div class="img-placeholder" data-label="Manual Hide Selection" style="height: 400px; border-radius: 4px;"></div>
+                        <img src="../assets/images/about/MANUAL HIDE SELECTION.jpg" alt="Manual Hide Selection" class="img-placeholder" style="width: 100%; height: 400px; object-fit: cover; border-radius: 4px;">
                         <div class="step-content">
                             <div class="step-num">01</div>
                             <h3>Manual Grain Assessment</h3>
@@ -167,7 +171,7 @@
 
                     <!-- Step 2 -->
                     <div class="process-step">
-                        <div class="img-placeholder" data-label="Hand Stitching" style="height: 400px; border-radius: 4px;"></div>
+                        <img src="../assets/images/about/HAND STITCHING.jpg" alt="Hand Stitching" class="img-placeholder" style="width: 100%; height: 400px; object-fit: cover; border-radius: 4px;">
                         <div class="step-content">
                             <div class="step-num">02</div>
                             <h3>The Twin-Needle Saddle Stitch</h3>
@@ -177,7 +181,7 @@
 
                     <!-- Step 3 -->
                     <div class="process-step">
-                        <div class="img-placeholder" data-label="Edge Burnishing" style="height: 400px; border-radius: 4px;"></div>
+                        <img src="../assets/images/about/EDGE BURNISHING.jpg" alt="Edge Burnishing" class="img-placeholder" style="width: 100%; height: 400px; object-fit: cover; border-radius: 4px;">
                         <div class="step-content">
                             <div class="step-num">03</div>
                             <h3>Beeswax Edge Burnish</h3>
@@ -197,22 +201,22 @@
                 </div>
                 <div class="team-grid">
                     <div class="team-card">
-                        <div class="img-placeholder team-image" data-label="Stitcher Portrait"></div>
+                        <img src="../assets/images/about/Elena Rossi.jpg" alt="Elena Rossi" class="img-placeholder team-image" style="width: 100%; object-fit: cover;">
                         <h4>Elena Rossi</h4>
                         <span>Master Stitcher</span>
                     </div>
                     <div class="team-card">
-                        <div class="img-placeholder team-image" data-label="Pattern Cutter Portrait"></div>
+                        <img src="../assets/images/about/Marcus Thorne.jpg" alt="Marcus Thorne" class="img-placeholder team-image" style="width: 100%; object-fit: cover;">
                         <h4>Marcus Thorne</h4>
                         <span>Head of Patterns</span>
                     </div>
                     <div class="team-card">
-                        <div class="img-placeholder team-image" data-label="Forger Portrait"></div>
+                        <img src="../assets/images/about/Saito Kenji.jpg" alt="Saito Kenji" class="img-placeholder team-image" style="width: 100%; object-fit: cover;">
                         <h4>Saito Kenji</h4>
                         <span>Hardware Specialist</span>
                     </div>
                     <div class="team-card">
-                        <div class="img-placeholder team-image" data-label="Quality Lead Portrait"></div>
+                        <img src="../assets/images/about/Sarah Finch.jpg" alt="Sarah Finch" class="img-placeholder team-image" style="width: 100%; object-fit: cover;">
                         <h4>Sarah Finch</h4>
                         <span>Studio Director</span>
                     </div>
@@ -227,9 +231,9 @@
                     <span class="journal-tag">Sustainability</span>
                     <h2 style="margin-top: var(--space-24);">The Eternity Pledge</h2>
                     <p style="max-width: 700px; margin: var(--space-32) auto;">We don't design for seasons; we design for generations. Every piece from our studio comes with a lifetime commitment to repair and a guarantee that it will never see a landfill.</p>
-                    <div style="display: flex; gap: var(--space-24); justify-content: center; margin-top: var(--space-48);">
-                        <a href="contact.html" class="btn btn-primary">Start a Repair</a>
-                        <a href="services.html" class="btn btn-secondary">Learn Our Philosophy</a>
+                    <div class="pledge-actions">
+                        <a href="contact.html" class="btn btn-primary">Start Repair</a>
+                        <a href="services.html" class="btn btn-secondary">Our Philosophy</a>
                     </div>
                 </div>
             </div>

@@ -85,17 +85,37 @@
         body:not(.dark-mode) .logo {
             color: var(--primary-color);
         }
+
+        @media (max-width: 640px) {
+            body { padding: var(--space-120) 0 var(--space-64); }
+            .status-link { top: var(--space-24) !important; left: var(--space-24) !important; }
+            .theme-toggle { top: var(--space-24) !important; right: var(--space-24) !important; }
+            .status-back-text { display: none; }
+            .countdown-container { gap: var(--space-24) !important; }
+            .countdown-val { font-size: 2rem !important; }
+            .glass-card { padding: var(--space-32) var(--space-24) !important; }
+            .newsletter-input-group { flex-direction: column; gap: var(--space-16); border: none; }
+            .newsletter-input { 
+                border: 1px solid rgba(0,0,0,0.1); 
+                padding: var(--space-16); 
+                width: 100%; 
+                border-radius: 4px;
+                text-align: center;
+            }
+            body.dark-mode .newsletter-input { border-color: rgba(255,255,255,0.1); }
+            .newsletter-btn { width: 100%; justify-content: center; padding: var(--space-16); border-radius: 4px; }
+        }
     </style>
 </head>
 <body>
 
-    <a href="../index.html" class="nav-link" style="position: absolute; top: var(--space-48); left: var(--space-48); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; z-index: 10; display: flex; align-items: center; gap: 8px; text-decoration: none;">
-        <i data-lucide="arrow-left" style="width: 20px; height: 20px;"></i>
-        Return to the Studio
+    <a href="../index.html" class="status-link" style="position: absolute; top: var(--space-32); left: var(--space-32); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; z-index: 10; display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit;">
+        <i data-lucide="arrow-left" style="width: 18px; height: 18px;"></i>
+        <span class="status-back-text">Back to Home</span>
     </a>
 
-    <button class="control-btn theme-toggle" aria-label="Toggle Theme" style="position: absolute; top: var(--space-48); right: var(--space-48); z-index: 11; background: transparent; border: none; cursor: pointer; color: inherit;">
-        <i data-lucide="moon" style="width: 24px; height: 24px;"></i>
+    <button class="control-btn theme-toggle" aria-label="Toggle Theme" style="position: absolute; top: var(--space-32); right: var(--space-32); z-index: 11; background: transparent; border: none; cursor: pointer; color: inherit;">
+        <i data-lucide="moon" style="width: 20px; height: 20px;"></i>
     </button>
 
     <div class="reveal-content">
@@ -105,43 +125,43 @@
         </a>
         
         <span class="journal-tag" style="color: var(--secondary-color); margin-bottom: var(--space-24);">Architectural Teaser</span>
-        <h1 style="margin-bottom: var(--space-24);">Something Fine is Being Crafted</h1>
-        <p style="opacity: 0.8; max-width: 600px; margin: 0 auto;">We are currently at the workbench finalizing the *Horizon Autumn* collection. Every stitch is manual, every edge is friction-polished. The wait is nearly over.</p>
+        <h1 style="margin-bottom: var(--space-24); font-size: clamp(2rem, 8vw, 3.5rem); line-height: 1.1;">Something Fine is <br>Being Crafted</h1>
+        <p style="opacity: 0.8; max-width: 600px; margin: 0 auto var(--space-48);">We are currently at the workbench finalizing the *Horizon Autumn* collection. Every stitch is manual, every edge is friction-polished.</p>
 
         <!-- Countdown -->
-        <div class="countdown-container">
+        <div class="countdown-container" style="display: flex; justify-content: center; gap: var(--space-32); margin-bottom: var(--space-64); flex-wrap: wrap;">
             <div class="countdown-unit">
-                <span class="countdown-val">12</span>
-                <span class="countdown-label">Days</span>
+                <span class="countdown-val" style="display: block; font-size: 2.5rem; font-weight: 700; font-family: var(--font-primary);">12</span>
+                <span class="countdown-label" style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.6;">Days</span>
             </div>
             <div class="countdown-unit">
-                <span class="countdown-val">08</span>
-                <span class="countdown-label">Hours</span>
+                <span class="countdown-val" style="display: block; font-size: 2.5rem; font-weight: 700; font-family: var(--font-primary);">08</span>
+                <span class="countdown-label" style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.6;">Hours</span>
             </div>
             <div class="countdown-unit">
-                <span class="countdown-val">42</span>
-                <span class="countdown-label">Min</span>
+                <span class="countdown-val" style="display: block; font-size: 2.5rem; font-weight: 700; font-family: var(--font-primary);">42</span>
+                <span class="countdown-label" style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.6;">Min</span>
             </div>
             <div class="countdown-unit">
-                <span class="countdown-val" id="secs">00</span>
-                <span class="countdown-label">Secs</span>
+                <span class="countdown-val" id="secs" style="display: block; font-size: 2.5rem; font-weight: 700; font-family: var(--font-primary);">00</span>
+                <span class="countdown-label" style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.6;">Secs</span>
             </div>
         </div>
 
         <!-- Crafting Progress -->
-        <div class="progress-container">
-            <div class="progress-header">
+        <div class="progress-container" style="max-width: 400px; margin: 0 auto var(--space-80);">
+            <div class="progress-header" style="display: flex; justify-content: space-between; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: var(--space-16); opacity: 0.6;">
                  <span>Studio Workflow</span>
                  <span>88% Hand-Stitched</span>
             </div>
-            <div class="progress-bar">
-                <div class="progress-fill"></div>
+            <div class="progress-bar" style="height: 4px; border-radius: 2px; overflow: hidden;">
+                <div class="progress-fill" style="width: 88%; height: 100%; background: var(--secondary-color);"></div>
             </div>
         </div>
 
         <!-- Notification Card -->
-        <div class="glass-card" style="max-width: 500px; margin: 0 auto; padding: var(--space-48);">
-            <h4>Gain First-Tier Access</h4>
+        <div class="glass-card" style="max-width: 500px; margin: 0 auto; padding: var(--space-48); border-radius: 4px;">
+            <h4 style="margin-bottom: var(--space-24);">Gain First-Tier Access</h4>
             <form class="newsletter-input-group">
                 <input type="email" placeholder="Private email address" class="newsletter-input" required>
                 <button type="submit" class="newsletter-btn">

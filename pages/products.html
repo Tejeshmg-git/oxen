@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <header id="main-header" class="scrolled">
+    <header id="main-header">
         <div class="container nav-container">
             <div class="logo-wrapper">
                 <a href="../index.html" class="logo">
@@ -85,23 +85,27 @@
         </div>
     </div>
 
-    <main style="padding-top: 100px;">
+    <main>
         <!-- Section 0: Hero Collections -->
-        <section class="section-padding">
-            <div class="container text-center">
-                <span class="journal-tag">The Portfolio</span>
-                <h1 style="margin-bottom: var(--space-24);">The Curated Vault</h1>
-                <p style="max-width: 700px; margin: 0 auto; opacity: 0.8;">Explore our definitive collection of hand-stitched leather essentials. From core heritage pieces to limited seasonal edits.</p>
+        <section class="hero" style="height: 85vh; background-image: url('../assets/images/collections/herosection-img.jpg'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center;">
+            <div style="position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.85) 100%);"></div>
+            <div class="container text-center" style="position: relative; color: white;">
+                <!-- Vault Entry -->
+                <div class="flex-center" style="flex-direction: column;">
+                    <span class="journal-tag" style="color: var(--secondary-color); letter-spacing: 5px; margin-bottom: var(--space-24); text-transform: uppercase; font-weight: 700;">The Oxen Portfolio</span>
+                    <h1 style="line-height: 1.1; margin-bottom: var(--space-48);">THE CURATED<br>VAULT</h1>
+                    <p style="max-width: 600px; margin: 0 auto; font-size: 1.2rem; opacity: 0.8; letter-spacing: 0.5px;">Explore our permanent archive and seasonal limited releases. Every piece is a testament to the uncompromising nature of hand-stitched leather.</p>
+                </div>
             </div>
         </section>
 
         <!-- Section 1: The Core Portfolio (Main Grid + Filter) -->
         <div class="filter-bar">
             <div class="container filter-links">
-                <a href="#" class="filter-link active">All Portfolio</a>
-                <a href="#" class="filter-link">Carrier Bags</a>
-                <a href="#" class="filter-link">Small Goods</a>
-                <a href="#" class="filter-link">Accessories</a>
+                <a href="#" class="filter-link active" data-filter="all">All Portfolio</a>
+                <a href="#" class="filter-link" data-filter="bags">Carrier Bags</a>
+                <a href="#" class="filter-link" data-filter="goods">Small Goods</a>
+                <a href="#" class="filter-link" data-filter="acc">Accessories</a>
             </div>
         </div>
 
@@ -109,9 +113,9 @@
             <div class="container">
                 <div class="grid grid-3">
                     <!-- Product 1 -->
-                    <a href="product-detail.html" class="feature-card" style="position: relative;">
+                    <a href="product-detail.html" class="feature-card" data-category="bags" style="position: relative;">
                         <span class="badge badge-limited">Limited Production</span>
-                        <div class="img-placeholder feature-image" data-label="The Heritage Satchel"></div>
+                        <img src="../assets/images/collections/The Heritage Satchel.jpg" alt="The Heritage Satchel" class="img-placeholder feature-image" style="width: 100%; object-fit: cover;">
                         <div class="feature-info">
                             <h4>The Heritage Satchel</h4>
                             <p style="font-size: 0.9rem; opacity: 0.7;">Full-grain Vachetta in Tobacco Brown.</p>
@@ -120,9 +124,9 @@
                     </a>
 
                     <!-- Product 2 -->
-                    <a href="product-detail.html" class="feature-card" style="position: relative;">
+                    <a href="product-detail.html" class="feature-card" data-category="goods" style="position: relative;">
                         <span class="badge badge-core">Core Collection</span>
-                        <div class="img-placeholder feature-image" data-label="The Bifold Wallet"></div>
+                        <img src="../assets/images/collections/The Bifold Wallet.webp" alt="The Bifold Wallet" class="img-placeholder feature-image" style="width: 100%; object-fit: cover;">
                         <div class="feature-info">
                             <h4>The Bifold Wallet</h4>
                             <p style="font-size: 0.9rem; opacity: 0.7;">Hand-stitched shell cordovan.</p>
@@ -131,9 +135,9 @@
                     </a>
 
                     <!-- Product 3 -->
-                    <a href="product-detail.html" class="feature-card" style="position: relative;">
+                    <a href="product-detail.html" class="feature-card" data-category="acc" style="position: relative;">
                         <span class="badge badge-archive">Archive Status</span>
-                        <div class="img-placeholder feature-image" data-label="The Architect Roll"></div>
+                        <img src="../assets/images/collections/The Architect Roll.webp" alt="The Architect Roll" class="img-placeholder feature-image" style="width: 100%; object-fit: cover;">
                         <div class="feature-info">
                             <h4>The Architect Roll</h4>
                             <p style="font-size: 0.9rem; opacity: 0.7;">Tool roll for design professionals.</p>
@@ -142,9 +146,9 @@
                     </a>
 
                     <!-- Repeat for 3 more to show grid depth -->
-                    <a href="product-detail.html" class="feature-card" style="position: relative;">
+                    <a href="product-detail.html" class="feature-card" data-category="bags" style="position: relative;">
                         <span class="badge badge-core">Core Collection</span>
-                        <div class="img-placeholder feature-image" data-label="Everyday Tote"></div>
+                        <img src="../assets/images/collections/The Everyday Tote.webp" alt="Everyday Tote" class="img-placeholder feature-image" style="width: 100%; object-fit: cover;">
                         <div class="feature-info">
                             <h4>The Everyday Tote</h4>
                             <p style="font-size: 0.9rem; opacity: 0.7;">Zero-hardware, single-piece construction.</p>
@@ -152,9 +156,9 @@
                         </div>
                     </a>
 
-                    <a href="product-detail.html" class="feature-card" style="position: relative;">
+                    <a href="product-detail.html" class="feature-card" data-category="goods" style="position: relative;">
                         <span class="badge badge-limited">Limit 1 Per Client</span>
-                        <div class="img-placeholder feature-image" data-label="The Midnight Clutch"></div>
+                        <img src="../assets/images/collections/The Midnight Clutch.webp" alt="The Midnight Clutch" class="img-placeholder feature-image" style="width: 100%; object-fit: cover;">
                         <div class="feature-info">
                             <h4>The Midnight Clutch</h4>
                             <p style="font-size: 0.9rem; opacity: 0.7;">Rare slate pigment finish.</p>
@@ -162,9 +166,9 @@
                         </div>
                     </a>
 
-                    <a href="product-detail.html" class="feature-card" style="position: relative;">
+                    <a href="product-detail.html" class="feature-card" data-category="acc" style="position: relative;">
                         <span class="badge badge-core">Core Collection</span>
-                        <div class="img-placeholder feature-image" data-label="Artisan Belt"></div>
+                        <img src="../assets/images/collections/The Artisan Belt.webp" alt="Artisan Belt" class="img-placeholder feature-image" style="width: 100%; object-fit: cover;">
                         <div class="feature-info">
                             <h4>The Artisan Belt</h4>
                             <p style="font-size: 0.9rem; opacity: 0.7;">12oz Bridle leather with solid brass buckle.</p>
@@ -176,11 +180,11 @@
         </section>
 
         <!-- Section 2: The Leather Atlas (Materials) -->
-        <section class="section-padding" style="background: var(--accent-cream); overflow: hidden;">
+        <section class="section-padding material-atlas" style="background: var(--accent-cream); overflow: hidden;">
             <div class="container">
                 <div class="grid grid-2" style="align-items: center;">
-                    <div class="img-placeholder" data-label="Macro Leather Texture" style="height: 500px; border-radius: 4px;"></div>
-                    <div style="padding-left: var(--space-48);">
+                    <img src="../assets/images/collections/The Material Atlas.jpg" alt="Macro Leather Texture" class="img-placeholder" style="width: 100%; height: 500px; object-fit: cover; border-radius: 4px;">
+                    <div>
                         <span class="journal-tag">The Material Atlas</span>
                         <h2>Beyond the Surface</h2>
                         <p>Our hides aren't just leather; they are stories recorded in fiber. We specialize in three primary grades, each selected for a specific tactile purpose.</p>
@@ -204,7 +208,7 @@
         </section>
 
         <!-- Section 3: The Evolution Gallery (Patina Journey) -->
-        <section class="section-padding" style="background: var(--bg-light); border-top: 1px solid rgba(0,0,0,0.05);">
+        <section class="section-padding evolution-gallery" style="background: var(--bg-light); border-top: 1px solid rgba(0,0,0,0.05);">
             <div class="container">
                 <div class="flex-center" style="flex-direction: column; margin-bottom: var(--space-64);">
                     <span class="journal-tag">The Lifecycle</span>
@@ -214,17 +218,17 @@
                 
                 <div class="grid grid-3">
                     <div class="text-center">
-                        <div class="img-placeholder" data-label="Raw State (0 Mo)" style="aspect-ratio: 1/1; border-radius: 4px; margin-bottom: var(--space-24);"></div>
+                        <img src="../assets/images/collections/The Raw State.webp" alt="Raw State (0 Mo)" class="img-placeholder" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; margin-bottom: var(--space-24);">
                         <h4>The Raw State</h4>
                         <p style="font-size: 0.85rem; opacity: 0.7;">Month 0: A pale, matte cream finish. Sensitive and pristine.</p>
                     </div>
                     <div class="text-center">
-                        <div class="img-placeholder" data-label="Seasoned (12 Mo)" style="aspect-ratio: 1/1; border-radius: 4px; margin-bottom: var(--space-24);"></div>
+                        <img src="../assets/images/collections/The Seasoned.webp" alt="Seasoned (12 Mo)" class="img-placeholder" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; margin-bottom: var(--space-24);">
                         <h4>The Seasoned</h4>
-                        <p style="font-size: 0.85rem; opacity: 0.7;">Year 1: Transitioning to a honey-gold hue with initial character marks.</p>
+                        <p style="font-size: 0.85rem; opacity: 0.7;">Year 1: Transitioning honey-gold hue with initial character marks.</p>
                     </div>
                     <div class="text-center">
-                        <div class="img-placeholder" data-label="Heirloom (5 Yr)" style="aspect-ratio: 1/1; border-radius: 4px; margin-bottom: var(--space-24);"></div>
+                        <img src="../assets/images/collections/The Heirloom.webp" alt="Heirloom (5 Yr)" class="img-placeholder" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; margin-bottom: var(--space-24);">
                         <h4>The Heirloom</h4>
                         <p style="font-size: 0.85rem; opacity: 0.7;">Year 5+: A deep, mahogany gloss. Virtually indestructible and entirely unique.</p>
                     </div>
@@ -265,13 +269,13 @@
         </section>
 
         <!-- Section 5: Hardware & Components -->
-        <section class="section-padding" style="background: var(--bg-light); border-top: 1px solid rgba(0,0,0,0.05);">
+        <section class="section-padding foundry-section" style="background: var(--bg-light); border-top: 1px solid rgba(0,0,0,0.05);">
             <div class="container grid grid-2" style="align-items: center;">
                  <div>
                     <span class="journal-tag">Foundry Work</span>
                     <h2>Solid Brass Foundations</h2>
                     <p>We believe a back is only as strong as its buckle. All our hardware is sand-cast solid brass, sourced from a family-owned foundry in West Midlands. No zinc alloys, no brittle plating—just metal that gains character with age.</p>
-                    <div style="margin-top: var(--space-32); display: flex; gap: var(--space-24);">
+                    <div class="foundry-perks">
                         <div class="flex-center" style="flex-direction: column; gap: 8px;">
                             <i data-lucide="anchor" style="color: var(--secondary-color);"></i>
                             <span style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase;">Salt-Proof</span>
@@ -286,22 +290,22 @@
                         </div>
                     </div>
                  </div>
-                 <div class="img-placeholder" data-label="Foundry Close-up" style="height: 400px; border-radius: 4px;"></div>
+                 <img src="../assets/images/collections/BRASS FOUNDATIONS.jpg" alt="Foundry Close-up" class="img-placeholder" style="width: 100%; height: 400px; object-fit: cover; border-radius: 4px;">
             </div>
         </section>
 
         <!-- Section 6: Concierge (Private Inquiries) -->
-        <section class="concierge-section">
-            <div class="concierge-container">
-                <div class="concierge-visual img-placeholder" data-label="Bespoke Artisan Visual">
-                    <!-- The ✦ symbol is handled in CSS -->
+        <section class="section-padding concierge-section" style="background: #1A130F; color: white;">
+            <div class="container concierge-grid">
+                <div class="concierge-portrait">
+                    <img src="../assets/images/collections/PRIVATE ACQUISITION.jpg" alt="Bespoke Artisan Visual" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 2px;">
                 </div>
-                <div class="concierge-info">
-                    <span class="journal-tag">The Concierge</span>
-                    <h2>Private Acquisition Service</h2>
-                    <p>Looking for a piece from our archive or a specific material combination not shown in the vault? Our concierge serves collectors and architectural professionals directly for rare acquisitions.</p>
-                    <div style="display: flex;">
-                        <a href="contact.html" class="btn btn-primary">Inquire Privately</a>
+                <div class="concierge-content">
+                    <span class="journal-tag" style="color: var(--secondary-color); margin-bottom: var(--space-24); display: block;">The Concierge</span>
+                    <h2 style="color: white; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1;">Private Acquisition Service</h2>
+                    <p style="font-size: 1.1rem; opacity: 0.7; margin: var(--space-32) 0 var(--space-48);">Looking for a piece from our archive or a specific material combination not shown in the vault? Our concierge serves collectors and architectural professionals directly for rare acquisitions.</p>
+                    <div class="concierge-actions">
+                        <a href="contact.html" class="btn btn-secondary" style="border-color: var(--secondary-color); color: var(--secondary-color);">Inquire Privately</a>
                     </div>
                 </div>
             </div>
