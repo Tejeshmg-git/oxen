@@ -46,6 +46,10 @@ body.dark-mode .logo {
     color: var(--secondary-color);
 }
 
+body.dark-mode .mobile-toggle {
+    color: var(--secondary-color);
+}
+
 body.dark-mode .btn-secondary {
     border-color: var(--secondary-color);
     color: var(--secondary-color);

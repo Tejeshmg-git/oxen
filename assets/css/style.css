@@ -389,6 +389,7 @@ body.dark-mode .logo-icon {
     right: 0; /* Align to right edge */
     width: min(400px, 85vw);
     height: 100vh;
+    height: 100dvh;
     background: var(--bg-light);
     z-index: 1100;
     padding: var(--space-48) var(--space-32);
@@ -399,6 +400,8 @@ body.dark-mode .logo-icon {
     transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1), 
                 visibility 0.5s cubic-bezier(0.77, 0, 0.175, 1);
     box-shadow: -20px 0 60px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .sidenav.active {
@@ -411,13 +414,13 @@ body.dark-mode .logo-icon {
     justify-content: space-between;
     align-items: center;
     margin-bottom: var(--space-64);
+    flex-shrink: 0;
 }
 
 .sidenav-links {
     display: flex;
     flex-direction: column;
     gap: var(--space-32);
-    margin-bottom: auto;
 }
 
 .sidenav-link {
@@ -433,8 +436,10 @@ body.dark-mode .logo-icon {
     display: flex;
     flex-direction: column;
     gap: var(--space-24);
-    padding-top: var(--space-32);
+    padding: var(--space-32) 0 var(--space-80);
     border-top: 1px solid rgba(0,0,0,0.05);
+    flex-shrink: 0;
+    margin-top: var(--space-48);
 }
 
 .sidenav-controls {
@@ -1702,6 +1707,7 @@ body.dark-mode .logo-icon {
     }
 }
 
+
 /* Home V2: Premium Sections */
 .hero-luxury {
     display: grid;
@@ -1709,6 +1715,76 @@ body.dark-mode .logo-icon {
     min-height: 100vh;
     width: 100%;
     overflow: hidden;
+}
+
+.masterpiece-showcase {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--space-120) 0;
+    overflow: hidden;
+}
+
+.showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-80);
+    align-items: center;
+}
+
+.showcase-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-24);
+    margin-top: var(--space-48);
+}
+
+.spec-item {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: var(--space-16);
+}
+
+.spec-label {
+    display: block;
+    color: var(--secondary-color);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: var(--space-8);
+}
+
+.spec-value {
+    font-family: var(--font-primary);
+    font-weight: 600;
+}
+
+/* Museum Gallery */
+.museum-gallery {
+    padding: var(--space-120) 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-48);
+}
+
+.gallery-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24);
+}
+
+.gallery-card .img-placeholder {
+    aspect-ratio: 1/1.5;
+    border-radius: 2px;
+}
+
+.gallery-caption {
+    font-size: 0.9rem;
+    opacity: 0.6;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 @media (max-width: 1024px) {
@@ -1782,7 +1858,13 @@ body.dark-mode .logo-icon {
     .sensory-content { order: 2; }
     
     .showcase-grid img { order: 2; height: 400px; margin-top: var(--space-48); }
-    .showcase-grid div:first-child { order: 1; }
+    .showcase-grid div:first-child { 
+        order: 1; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
     
     .bespoke-light { order: 1; min-height: 350px; padding: 0; }
     .bespoke-dark { order: 2; }
@@ -1822,75 +1904,7 @@ body.dark-mode .logo-icon {
 }
 
 /* Masterpiece Showcase */
-.masterpiece-showcase {
-    background-color: var(--primary-color);
-    color: white;
-    padding: var(--space-120) 0;
-    overflow: hidden;
-}
 
-.showcase-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-80);
-    align-items: center;
-}
-
-.showcase-specs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-24);
-    margin-top: var(--space-48);
-}
-
-.spec-item {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: var(--space-16);
-}
-
-.spec-label {
-    display: block;
-    color: var(--secondary-color);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: var(--space-8);
-}
-
-.spec-value {
-    font-family: var(--font-primary);
-    font-weight: 600;
-}
-
-/* Museum Gallery */
-.museum-gallery {
-    padding: var(--space-120) 0;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-48);
-}
-
-.gallery-card {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-24);
-}
-
-.gallery-card .img-placeholder {
-    aspect-ratio: 1/1.5;
-    border-radius: 2px;
-}
-
-.gallery-caption {
-    font-size: 0.9rem;
-    opacity: 0.6;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-align: center;
-}
 
 /* Consolidated Gallery styles into global media blocks above */
 
