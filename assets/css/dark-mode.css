@@ -46,15 +46,9 @@ body.dark-mode .logo {
     color: var(--secondary-color);
 }
 
-body.dark-mode .btn-secondary,
-body.dark-mode .btn-signin {
+body.dark-mode .btn-secondary {
     border-color: var(--secondary-color);
     color: var(--secondary-color);
-}
-
-body.dark-mode .btn-signin:hover {
-    background-color: var(--secondary-color) !important;
-    color: #121212 !important;
 }
 
 body.dark-mode .img-placeholder {

@@ -39,12 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Scroll Effect Logic
     const header = document.getElementById('main-header');
     window.addEventListener('scroll', () => {
-        if (header) {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
         }
     });
 
