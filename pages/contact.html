@@ -99,21 +99,21 @@
             <div class="container text-center" style="position: relative; color: white;">
                 <span class="journal-tag" style="color: var(--secondary-color); letter-spacing: 5px; margin-bottom: var(--space-24); margin-top: var(--space-64); display: block; font-weight: 700;">Reach the Studio</span>
                 <h1 style="margin-bottom: var(--space-48);">Human Dialogue</h1>
-                <p style="max-width: 650px; margin: 0 auto var(--space-80); font-size: 1.1rem; opacity: 0.8; letter-spacing: 0.5px;">Whether for a private commission, a professional partnership, or curious inquiry, our lead artisans are ready to begin the dialogue.</p>
+                <p style="max-width: 650px; margin: 0 auto var(--space-80); opacity: 0.8; letter-spacing: 0.5px;">Whether for a private commission, a professional partnership, or curious inquiry, our lead artisans are ready to begin the dialogue.</p>
                 
                 <!-- Contact Micro-Interface -->
                 <div class="flex-center contact-micro" style="gap: clamp(1rem, 5vw, 6rem); transition: var(--transition-smooth);">
                     <div class="flex-center" style="flex-direction: column; gap: var(--space-16);">
                         <i data-lucide="mail" style="color: var(--secondary-color); width: 22px; height: 22px;"></i>
-                        <span style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.6);">Inquiries</span>
+                        <span style="font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.6);">Email Inquiries</span>
                     </div>
                     <div class="flex-center" style="flex-direction: column; gap: var(--space-16);">
                         <i data-lucide="phone" style="color: var(--secondary-color); width: 22px; height: 22px;"></i>
-                        <span style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.6);">Direct Line</span>
+                        <span style="font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.6);">Direct Line</span>
                     </div>
                     <div class="flex-center" style="flex-direction: column; gap: var(--space-16);">
                         <i data-lucide="map-pin" style="color: var(--secondary-color); width: 22px; height: 22px;"></i>
-                        <span style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.6);">Global Studios</span>
+                        <span style="font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.6);">Global Studios</span>
                     </div>
                 </div>
             </div>
@@ -123,7 +123,7 @@
             <div class="container grid grid-2 inquiry-grid">
                 <div>
                     <span class="journal-tag">Connect</span>
-                    <h1 style="margin-bottom: var(--space-48);">Open an Inquiry</h1>
+                    <h4 style="margin-bottom: var(--space-48);">Open an Inquiry</h4>
                     <form class="contact-form">
                         <div class="form-row">
                             <div class="form-group">
@@ -152,14 +152,29 @@
                         <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Submit Inquiry</button>
                     </form>
                 </div>
-                <div class="concierge-box-wrapper" style="padding-top: var(--space-80);">
+                <div class="concierge-box-wrapper">
                     <div class="pledge-box" style="text-align: left; padding: var(--space-48);">
                         <span class="journal-tag">Direct Line</span>
                         <h4 style="margin: var(--space-24) 0;">Studio Concierge</h4>
-                        <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: var(--space-32);">For time-sensitive architectural projects or press verification, please contact our London lead directly.</p>
+                        <p style="opacity: 0.8; margin-bottom: var(--space-32);">For time-sensitive architectural projects or press verification, please contact our London lead directly.</p>
                         <div style="display: flex; flex-direction: column; gap: var(--space-16);">
-                            <a href="mailto:studio@oxenleather.com" style="text-decoration: none; color: var(--primary-color); font-weight: 600;">studio@oxenleather.com</a>
-                            <a href="tel:+442071234567" style="text-decoration: none; color: var(--primary-color); font-weight: 600;">+44 207 123 4567</a>
+                            <a href="mailto:studio@oxenleather.com" style="text-decoration: none; color: var(--text-primary); font-weight: 600;">studio@oxenleather.com</a>
+                            <a href="tel:+442071234567" style="text-decoration: none; color: var(--text-primary); font-weight: 600;">+44 207 125 4567</a>
+                        </div>
+
+                        <hr style="margin: var(--space-32) 0; border: none; border-top: 1px solid rgba(0,0,0,0.1);">
+
+                        <div style="display: flex; flex-direction: column; gap: var(--space-32);">
+                            <div>
+                                <h5 style="margin-bottom: var(--space-12); text-transform: uppercase; letter-spacing: 1px;">Studio Availability</h5>
+                                <p style="margin-bottom: 0; opacity: 0.7;">Monday — Friday<br>09:00 — 18:00 GMT</p>
+                            </div>
+                            
+                            <div>
+                                <h5 style="margin-bottom: var(--space-12); text-transform: uppercase; letter-spacing: 1px;">Response Protocol</h5>
+                                <p style="margin-bottom: 0; opacity: 0.7;">Urgent architectural briefs are prioritized with a direct response within 4 business hours.</p>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -173,8 +188,8 @@
                     <span class="journal-tag">Global Studio Network</span>
                     <h2>The Forged Presence</h2>
                 </div>
+                <div id="contact-map" class="map-container"></div>
             </div>
-            <div id="contact-map" class="map-container"></div>
         </section>
 
         <!-- Section 3: The Regional Forged (Addresses) -->
@@ -191,7 +206,7 @@
                         <span class="journal-tag">Flagship</span>
                         <h4>London Studio</h4>
                         <p>12 Artisan Walk, London<br>United Kingdom, SE1 9XN</p>
-                        <p style="margin-top: var(--space-8); font-size: 0.85rem; opacity: 0.6;"><em>Appointment Only</em></p>
+                        <p style="margin-top: var(--space-8); opacity: 0.6;"><em>Appointment Only</em></p>
                         <a href="https://maps.google.com" target="_blank" class="location-link">Get Directions <i data-lucide="arrow-right" style="width: 14px; height: 14px; margin: 0;"></i></a>
                     </div>
                     <div class="location-item">
@@ -199,7 +214,7 @@
                         <span class="journal-tag">The Hub</span>
                         <h4>Tuscany Forge</h4>
                         <p>Via dei Cuoiai, 45, Florence<br>Italy, 50123</p>
-                        <p style="margin-top: var(--space-8); font-size: 0.85rem; opacity: 0.6;"><em>Tannery & Production</em></p>
+                        <p style="margin-top: var(--space-8); opacity: 0.6;"><em>Tannery & Production</em></p>
                         <a href="https://maps.google.com" target="_blank" class="location-link">Get Directions <i data-lucide="arrow-right" style="width: 14px; height: 14px; margin: 0;"></i></a>
                     </div>
                     <div class="location-item">
@@ -207,7 +222,7 @@
                         <span class="journal-tag">Exhibition</span>
                         <h4>New York Showroom</h4>
                         <p>250 Mercer St, SoHo, NY<br>United States, 10012</p>
-                        <p style="margin-top: var(--space-8); font-size: 0.85rem; opacity: 0.6;"><em>Archive Exhibitions</em></p>
+                        <p style="margin-top: var(--space-8); opacity: 0.6;"><em>Archive Exhibitions</em></p>
                         <a href="https://maps.google.com" target="_blank" class="location-link">Get Directions <i data-lucide="arrow-right" style="width: 14px; height: 14px; margin: 0;"></i></a>
                     </div>
                 </div>
@@ -225,17 +240,17 @@
                     <div class="text-center">
                         <span class="step-num">01</span>
                         <h4>Studio Review</h4>
-                        <p style="font-size: 0.9rem; opacity: 0.7;">Every inquiry is reviewed by our lead artisan within 24 hours of receipt.</p>
+                        <p style="opacity: 0.7;">Every inquiry is reviewed by our lead artisan within 24 hours of receipt.</p>
                     </div>
                     <div class="text-center">
                         <span class="step-num">02</span>
                         <h4>Technical Brief</h4>
-                        <p style="font-size: 0.9rem; opacity: 0.7;">Accepted commissions enter a brief phase where materials and hardware are selected.</p>
+                        <p style="opacity: 0.7;">Accepted commissions enter a brief phase where materials and hardware are selected.</p>
                     </div>
                     <div class="text-center">
                         <span class="step-num">03</span>
                         <h4>Digital Draft</h4>
-                        <p style="font-size: 0.9rem; opacity: 0.7;">Initial silhouettes are drafted digitally before the first cut is made in the study studio.</p>
+                        <p style="opacity: 0.7;">Initial silhouettes are drafted digitally before the first cut is made in the study studio.</p>
                     </div>
                 </div>
             </div>
@@ -269,21 +284,21 @@
                     <!-- Instagram -->
                     <div class="pledge-box social-box">
                         <h4>Visual Dialogue</h4>
-                        <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: var(--space-24);">Share photos of your space or patina progress for rapid design advice.</p>
+                        <p style="opacity: 0.8; margin-bottom: var(--space-24);">Share photos of your space or patina progress for rapid design advice.</p>
                         <a href="#" class="btn btn-secondary btn-sm" style="border-color: var(--secondary-color); color: var(--secondary-color);">@oxenstudio</a>
                     </div>
 
                     <!-- WhatsApp -->
                     <div class="pledge-box social-box">
                         <h4>Rapid Technical</h4>
-                        <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: var(--space-24);">Direct line for dimensions, material availability, and hardware queries.</p>
+                        <p style="opacity: 0.8; margin-bottom: var(--space-24);">Direct line for dimensions, material availability, and hardware queries.</p>
                         <a href="#" class="btn btn-secondary btn-sm" style="border-color: var(--secondary-color); color: var(--secondary-color);">WhatsApp Concierge</a>
                     </div>
 
                     <!-- LinkedIn -->
                     <div class="pledge-box social-box">
                         <h4>Professional</h4>
-                        <p style="font-size: 0.85rem; opacity: 0.8; margin-bottom: var(--space-24);">For architectural licensing, hotel commissions, and firm partnerships.</p>
+                        <p style="opacity: 0.8; margin-bottom: var(--space-24);">For architectural licensing, hotel commissions, and firm partnerships.</p>
                         <a href="#" class="btn btn-secondary btn-sm" style="border-color: var(--secondary-color); color: var(--secondary-color);">Partner Network</a>
                     </div>
                 </div>

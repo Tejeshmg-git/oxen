@@ -10,6 +10,8 @@ body.dark-mode {
     
     background-color: var(--bg-dark);
     color: var(--text-dark);
+    --text-primary: var(--text-dark);
+    --text-on-gold: #000000;
 }
 
 body.dark-mode h1,
@@ -164,4 +166,37 @@ body.dark-mode .journal-tag {
 
 body.dark-mode .footer-bottom {
     border-top-color: rgba(255,255,255,0.05);
+}
+
+/* Prevent usage of #3D2B1F (brown) for text in dark mode */
+body.dark-mode [style*="color: var(--primary-color)"],
+body.dark-mode [style*="color: #3D2B1F"],
+body.dark-mode [style*="color: #3d2b1f"] {
+    color: var(--text-dark) !important;
+}
+
+/* Specific override for primary buttons which use brown text on gold */
+body.dark-mode .btn-primary {
+    color: #000000 !important; /* Use pure black instead of brown on the gold background */
+}
+
+/* Override any other specific usages found in common components */
+body.dark-mode .pledge-box a:not(.btn) {
+    color: var(--secondary-color) !important;
+}
+
+body.dark-mode .nav-link.active {
+    color: var(--secondary-color) !important;
+}
+
+/* --- Trendy UI: Stats Section --- */
+body.dark-mode .stats-section {
+    background: var(--bg-dark);
+    color: var(--text-primary);
+}
+body.dark-mode .stat-card {
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+body.dark-mode .stat-card:hover {
+    background: rgba(255,255,255,0.02);
 }

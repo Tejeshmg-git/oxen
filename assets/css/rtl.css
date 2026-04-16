@@ -11,7 +11,21 @@
     flex-direction: row-reverse;
 }
 
-/* Ensure icons and other directional elements flip correctly if needed */
 [dir="rtl"] .nav-controls {
     flex-direction: row-reverse;
+}
+
+/* Ensure icons and other directional elements flip correctly */
+[dir="rtl"] [data-lucide="arrow-right"],
+[dir="rtl"] [data-lucide="chevron-right"],
+[dir="rtl"] .newsletter-btn i {
+    transform: scaleX(-1);
+}
+
+[dir="rtl"] .newsletter-input-group {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .newsletter-btn {
+    padding: 0 var(--space-16) 0 0;
 }

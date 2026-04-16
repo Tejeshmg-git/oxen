@@ -25,7 +25,7 @@
         .reveal-content {
             position: relative;
             z-index: 3;
-            color: var(--primary-color);
+            color: var(--text-primary);
             text-align: center;
             width: 100%;
             max-width: 900px;
@@ -63,10 +63,10 @@
         /* Light Theme Manual Adjustments */
         body:not(.dark-mode) .reveal-content h1,
         body:not(.dark-mode) .reveal-content h4 {
-            color: var(--primary-color);
+            color: var(--text-primary);
         }
         body:not(.dark-mode) .countdown-val {
-            color: var(--primary-color);
+            color: var(--text-primary);
         }
         body:not(.dark-mode) .countdown-label {
             color: rgba(61, 43, 31, 0.5);
@@ -80,10 +80,10 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
         body:not(.dark-mode) .nav-link {
-            color: var(--primary-color);
+            color: var(--text-primary);
         }
         body:not(.dark-mode) .logo {
-            color: var(--primary-color);
+            color: var(--text-primary);
         }
 
         @media (max-width: 640px) {
@@ -92,7 +92,6 @@
             .theme-toggle { top: var(--space-24) !important; right: var(--space-24) !important; }
             .status-back-text { display: none; }
             .countdown-container { gap: var(--space-24) !important; }
-            .countdown-val { font-size: 2rem !important; }
             .glass-card { padding: var(--space-32) var(--space-24) !important; }
             .newsletter-input-group { flex-direction: column; gap: var(--space-16); border: none; }
             .newsletter-input { 
@@ -109,7 +108,7 @@
 </head>
 <body>
 
-    <a href="../index.html" class="status-link" style="position: absolute; top: var(--space-32); left: var(--space-32); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; z-index: 10; display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit;">
+    <a href="../index.html" class="status-link" style="position: absolute; top: var(--space-32); left: var(--space-32); text-transform: uppercase; letter-spacing: 2px; z-index: 10; display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit;">
         <i data-lucide="arrow-left" style="width: 18px; height: 18px;"></i>
         <span class="status-back-text">Back to Home</span>
     </a>
@@ -125,32 +124,32 @@
         </a>
         
         <span class="journal-tag" style="color: var(--secondary-color); margin-bottom: var(--space-24);">Architectural Teaser</span>
-        <h1 style="margin-bottom: var(--space-24); font-size: clamp(2rem, 8vw, 3.5rem); line-height: 1.1;">Something Fine is <br>Being Crafted</h1>
+        <h1 style="margin-bottom: var(--space-24); line-height: 1.1;">Something Fine is <br>Being Crafted</h1>
         <p style="opacity: 0.8; max-width: 600px; margin: 0 auto var(--space-48);">We are currently at the workbench finalizing the *Horizon Autumn* collection. Every stitch is manual, every edge is friction-polished.</p>
 
         <!-- Countdown -->
         <div class="countdown-container" style="display: flex; justify-content: center; gap: var(--space-32); margin-bottom: var(--space-64); flex-wrap: wrap;">
             <div class="countdown-unit">
-                <span class="countdown-val" style="display: block; font-size: 2.5rem; font-weight: 700; font-family: var(--font-primary);">12</span>
-                <span class="countdown-label" style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.6;">Days</span>
+                <span class="countdown-val" style="display: block; font-weight: 700; font-family: var(--font-primary);">12</span>
+                <span class="countdown-label" style="text-transform: uppercase; letter-spacing: 2px; opacity: 0.6;">Days</span>
             </div>
             <div class="countdown-unit">
-                <span class="countdown-val" style="display: block; font-size: 2.5rem; font-weight: 700; font-family: var(--font-primary);">08</span>
-                <span class="countdown-label" style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.6;">Hours</span>
+                <span class="countdown-val" style="display: block; font-weight: 700; font-family: var(--font-primary);">08</span>
+                <span class="countdown-label" style="text-transform: uppercase; letter-spacing: 2px; opacity: 0.6;">Hours</span>
             </div>
             <div class="countdown-unit">
-                <span class="countdown-val" style="display: block; font-size: 2.5rem; font-weight: 700; font-family: var(--font-primary);">42</span>
-                <span class="countdown-label" style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.6;">Min</span>
+                <span class="countdown-val" style="display: block; font-weight: 700; font-family: var(--font-primary);">42</span>
+                <span class="countdown-label" style="text-transform: uppercase; letter-spacing: 2px; opacity: 0.6;">Min</span>
             </div>
             <div class="countdown-unit">
-                <span class="countdown-val" id="secs" style="display: block; font-size: 2.5rem; font-weight: 700; font-family: var(--font-primary);">00</span>
-                <span class="countdown-label" style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.6;">Secs</span>
+                <span class="countdown-val" id="secs" style="display: block; font-weight: 700; font-family: var(--font-primary);">00</span>
+                <span class="countdown-label" style="text-transform: uppercase; letter-spacing: 2px; opacity: 0.6;">Secs</span>
             </div>
         </div>
 
         <!-- Crafting Progress -->
         <div class="progress-container" style="max-width: 400px; margin: 0 auto var(--space-80);">
-            <div class="progress-header" style="display: flex; justify-content: space-between; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: var(--space-16); opacity: 0.6;">
+            <div class="progress-header" style="display: flex; justify-content: space-between; text-transform: uppercase; letter-spacing: 1px; margin-bottom: var(--space-16); opacity: 0.6;">
                  <span>Studio Workflow</span>
                  <span>88% Hand-Stitched</span>
             </div>
@@ -169,7 +168,7 @@
                      <i data-lucide="arrow-right"></i>
                 </button>
             </form>
-            <p style="font-size: 0.7rem; opacity: 0.6; margin-top: var(--space-24);">✦ Collectors on the waitlist receive a 4-hour window before public release.</p>
+            <p style="opacity: 0.6; margin-top: var(--space-24);">✦ Collectors on the waitlist receive a 4-hour window before public release.</p>
         </div>
 
     </div>

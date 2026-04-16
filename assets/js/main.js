@@ -27,11 +27,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const rtlToggles = document.querySelectorAll('.rtl-toggle');
     const html = document.documentElement;
 
+    const updateRTLText = () => {
+        const currentDir = html.getAttribute('dir') || 'ltr';
+        rtlToggles.forEach(btn => {
+            btn.innerHTML = `<span style="font-weight: 700; font-size: var(--text-xs);">${currentDir === 'rtl' ? 'LTR' : 'RTL'}</span>`;
+        });
+    };
+
     const toggleRTL = () => {
-        const currentDir = html.getAttribute('dir');
+        const currentDir = html.getAttribute('dir') || 'ltr';
         const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
         html.setAttribute('dir', newDir);
         localStorage.setItem('oxen-dir', newDir);
+        updateRTLText();
     };
 
     rtlToggles.forEach(btn => btn.addEventListener('click', toggleRTL));
@@ -61,6 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedDir) {
         html.setAttribute('dir', savedDir);
     }
+    
+    // Initialize RTL button text
+    updateRTLText();
 
     // Side-Nav Mobile Logic
     const mobileToggle = document.getElementById('mobile-toggle');
@@ -121,4 +132,42 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    /* --- Premium UX Javascript --- */
+    
+
+    // 2. Scroll-Triggered Fade & Stagger Sequences
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Dynamically apply animation classes to elements without touching HTML
+    const revealTargets = document.querySelectorAll('section h2, .feature-card, .journal-card, .value-item, .editorial-content, .gallery-card');
+    revealTargets.forEach((el, index) => {
+        el.classList.add('reveal-up');
+        // Add a slight stagger based on DOM order
+        el.style.transitionDelay = `${(index % 4) * 0.1}s`;
+        revealObserver.observe(el);
+    });
+
+    // 3. Simple Parallax effect for massive sections
+    const parallaxImages = document.querySelectorAll('.breakout-section');
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        parallaxImages.forEach(img => {
+            // Already uses background-attachment: fixed, but we can enhance it
+            // if needed. Currently rely on native CSS for performance.
+        });
+    });
+
 });
