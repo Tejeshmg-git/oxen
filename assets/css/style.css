@@ -838,8 +838,8 @@ body.dark-mode .logo-icon {
 
 .editorial-badge {
     position: absolute;
-    top: -20px;
-    right: -20px;
+    top: 15px;
+    right: 15px;
     background: var(--secondary-color);
     color: white;
     padding: var(--space-12) var(--space-24);
@@ -848,8 +848,9 @@ body.dark-mode .logo-icon {
     font-size: var(--text-xs);
     letter-spacing: 2px;
     text-transform: uppercase;
-    transform: rotate(5deg);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transform: rotate(-3deg);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    z-index: 10;
 }
 
 /* Feature Cards */
@@ -1831,11 +1832,17 @@ body.dark-mode .logo-icon {
 }
 
 .gallery-caption {
+    transition: var(--transition-smooth);
     font-size: 0.9rem;
     opacity: 0.6;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-align: center;
+}
+
+.gallery-card:hover .gallery-caption {
+    color: var(--secondary-color);
+    opacity: 1;
 }
 
 @media (max-width: 1024px) {

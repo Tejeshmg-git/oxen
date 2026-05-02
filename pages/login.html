@@ -116,14 +116,15 @@
 
         /* Auth Link Styling */
         .auth-container a:not(.logo):not(.btn) {
-            color: inherit;
+            color: var(--secondary-color);
             text-decoration: underline;
             text-underline-offset: 4px;
-            opacity: 0.8;
+            opacity: 1;
             transition: var(--transition-smooth);
+            font-weight: 600;
         }
         .auth-container a:not(.logo):not(.btn):hover {
-            opacity: 1;
+            opacity: 0.8;
             color: var(--secondary-color);
         }
 
@@ -154,12 +155,12 @@
 
     <div class="auth-container">
         <div class="text-center" style="margin-bottom: var(--space-32);">
-            <a href="../index.html" class="logo" style="justify-content: center;">
+            <a href="../index.html" class="logo" style="justify-content: center; margin-bottom: var(--space-16);">
                 <img src="../assets/img/logo.png" alt="Oxen Logo" class="logo-icon">
                 Oxen
             </a>
-            <h1 style="margin-top: var(--space-16);">Welcome Back</h1>
-            <p>Enter your credentials to access your account</p>
+            <h1 style="font-size: 1.75rem; text-transform: none; letter-spacing: normal; font-weight: 700; margin-top: var(--space-16);">Welcome Back</h1>
+            <p style="opacity: 0.6; font-size: var(--text-ui);">Enter your credentials to access your account</p>
         </div>
 
         <form>
